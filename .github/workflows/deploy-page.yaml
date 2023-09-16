@@ -2,8 +2,11 @@ name: Build and Deploy
 
 on:
   push:
+    paths:
+      - src/**
+      - .github/workflows/deploy-page.yaml
     branches:
-      - test
+      - main
 
 jobs:
   build:
