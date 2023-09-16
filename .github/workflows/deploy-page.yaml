@@ -11,7 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Get tags
+        run: git fetch --tags origin
 
       - name: Install Node.js
         uses: actions/setup-node@v2
