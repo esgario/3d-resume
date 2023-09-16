@@ -1,0 +1,46 @@
+name: Build and Deploy
+
+on:
+  push:
+    paths:
+      - src/**
+      - .github/workflows/deploy-page.yaml
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get tags
+        run: git fetch --tags origin
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npx parcel build ./src/index.html --public-url ./
+
+      - name: Move assets to the dist folder
+        run: mv src/assets dist
+      
+      - name: Rename dist folder to docs
+        run: mv dist docs
+
+      - name: Commit docs folder
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git checkout dist || git checkout -b dist
+          git add . --force
+          git commit -m "Upload page"
+          git push --set-upstream origin dist -f
