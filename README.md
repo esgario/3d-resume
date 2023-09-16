@@ -3,7 +3,13 @@
 Run the following command to start the development server:
 
 ```
-npx vite
+npx vite src
+```
+
+Building the project with parcel:
+
+```
+npx parcel build src/index.html
 ```
 
 ## Generating Avatar
