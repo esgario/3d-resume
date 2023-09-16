@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npx parcel build
+        run: npx parcel build ./src/index.html --public-url ./
 
       - name: Move assets to the dist folder
         run: mv src/assets dist
