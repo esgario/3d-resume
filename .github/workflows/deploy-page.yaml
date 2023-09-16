@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions"
-          git checkout dist
-          git add docs
+          git switch dist
+          git add docs/
           git commit -m "Upload page"
           git push -u origin dist
