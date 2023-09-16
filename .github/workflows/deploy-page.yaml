@@ -32,9 +32,9 @@ jobs:
 
       - name: Commit docs folder
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "GitHub Actions"
-          git switch dist
-          git add docs/
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git checkout dist || git checkout -b dist
+          git add . --force
           git commit -m "Upload page"
-          git push -u origin dist
+          git push --set-upstream origin dist -f
