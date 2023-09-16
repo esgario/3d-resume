@@ -12,6 +12,12 @@ Building the project with parcel:
 npx parcel build src/index.html
 ```
 
+Formatting the code:
+
+```
+npx prettier . --write
+```
+
 ## Generating Avatar
 
 [Ready Player Me](https://readyplayer.me/)
