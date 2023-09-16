@@ -1,6 +1,7 @@
 ## Development
 
 Run the following command to start the development server:
+
 ```
 npx vite
 ```
@@ -10,6 +11,7 @@ npx vite
 [Ready Player Me](https://readyplayer.me/)
 
 To download the avatar with all the morph targets, use the following URL:
+
 ```
 https://readyplayer.me/api/avatar/download?avatar=${avatarId}&morphTargets=eyeBlinkLeft,eyeBlinkRight,Oculus Visemes
 ```
