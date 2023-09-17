@@ -15,4 +15,5 @@ export const config = {
         H: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], // "viseme_nn": 8
         X: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // "viseme_sil": 0
     },
+    CAMERA_POSITION: [0, 0.1, 1.0],
 };

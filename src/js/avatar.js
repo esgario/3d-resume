@@ -1,11 +1,23 @@
+import * as THREE from "three";
 import { config } from "./config.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
 
 let model, mixer, rightEye, leftEye, mouthCues, audio;
 
+function addModelToScene(model, scene) {
+    scene.add(model);
+    const spinner = document.querySelector(".spinner-border");
+    spinner.parentNode.removeChild(spinner);
+}
+
 function addAvatar(scene) {
-    const gltfloader = new GLTFLoader();
+    const loadingManager = new THREE.LoadingManager();
+    loadingManager.onLoad = () => {
+        console.log("Loading complete!");
+    };
+
+    const gltfloader = new GLTFLoader(loadingManager);
     gltfloader.load(`${config.MODELS_PATH}/avatar.glb`, (result) => {
         model = result.scene;
         model.position.set(0, -1.5, 0);
@@ -25,6 +37,7 @@ function addAvatar(scene) {
         fbxloader.load(`${config.ANIMATIONS_PATH}/idle.fbx`, (anim) => {
             const action = mixer.clipAction(anim.animations[0]);
             action.play();
+            addModelToScene(model, scene);
         });
 
         // Get eyes
@@ -34,9 +47,6 @@ function addAvatar(scene) {
 
         // Setup blinking eyes
         startBlinkingEyes();
-
-        // Add model to scene
-        scene.add(model);
     });
 }
 
