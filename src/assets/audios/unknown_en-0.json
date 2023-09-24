@@ -1,15 +1,44 @@
 {
-  "metadata": {
-    "soundFile": "/mnt/c/Users/guilh/Documents/Code/Javascript/3d-resume/utils/../src/assets/audios/unknown_en-0.ogg",
-    "duration": 1.51
-  },
-  "mouthCues": [
-    { "start": 0.00, "end": 0.13, "value": "X" },
-    { "start": 0.13, "end": 0.26, "value": "B" },
-    { "start": 0.26, "end": 0.33, "value": "D" },
-    { "start": 0.33, "end": 1.03, "value": "B" },
-    { "start": 1.03, "end": 1.24, "value": "C" },
-    { "start": 1.24, "end": 1.38, "value": "B" },
-    { "start": 1.38, "end": 1.51, "value": "X" }
-  ]
+    "metadata": {
+        "soundFile": "../src/assets/audios/unknown_en-0.json",
+        "duration": 1.51,
+        "text": "Sorry, I didn't understand."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.13,
+            "value": "X"
+        },
+        {
+            "start": 0.13,
+            "end": 0.26,
+            "value": "B"
+        },
+        {
+            "start": 0.26,
+            "end": 0.33,
+            "value": "D"
+        },
+        {
+            "start": 0.33,
+            "end": 1.03,
+            "value": "B"
+        },
+        {
+            "start": 1.03,
+            "end": 1.24,
+            "value": "C"
+        },
+        {
+            "start": 1.24,
+            "end": 1.38,
+            "value": "B"
+        },
+        {
+            "start": 1.38,
+            "end": 1.51,
+            "value": "X"
+        }
+    ]
 }
