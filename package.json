@@ -4,6 +4,7 @@
     },
     "devDependencies": {
         "prettier": "3.0.3",
+        "stats.js": "^0.17.0",
         "vite": "^4.4.9"
     }
 }
