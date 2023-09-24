@@ -76,7 +76,7 @@ function startBlinkingEyes() {
  */
 function playAudio(filename) {
     // Play audio
-    audio = new Audio(`${config.AUDIOS_PATH}/${filename}.mp3`);
+    audio = new Audio(`${config.AUDIOS_PATH}/${filename}.ogg`);
     audio.play();
 
     // Load mouth cues

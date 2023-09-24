@@ -2,8 +2,15 @@ import * as THREE from "three";
 import { config } from "./config.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { addAvatar, updateAvatar, playAudio } from "./avatar.js";
+import Stats from 'stats.js';
 
 let scene, camera, renderer, controls, clock;
+let controlsActive = false;
+
+const stats = new Stats()
+// stats.showPanel(0) // 0: fps, 1: ms, 2: mb, 3+: custom
+// document.body.appendChild(stats.dom)
+
 
 /**
  * Initializes the scene, camera, renderer, and controls.
@@ -30,6 +37,16 @@ function init() {
 
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enablePan = false;
+    controls.addEventListener('start', () => controlsActive = true);
+    controls.addEventListener('end', () => controlsActive = false);
+
+    window.addEventListener('resize', onResize, false);
+}
+
+function onResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 function setupInspector() {
@@ -49,17 +66,7 @@ function addLights(scene) {
     // Add point light
     const plWhite = new THREE.PointLight(0xeec9cc, 20);
     plWhite.position.set(1, 2, 3);
-    plWhite.castShadow = true;
-    plWhite.shadow.bias = -0.0005;
-    plWhite.shadow.mapSize.set(1024 * 4, 1024 * 4);
     scene.add(plWhite);
-
-    const plYellow = new THREE.PointLight(0xffee77, 5);
-    plYellow.position.set(-1, 2, 3);
-    plYellow.castShadow = true;
-    plYellow.shadow.bias = -0.0005;
-    plYellow.shadow.mapSize.set(1024 * 4, 1024 * 4);
-    scene.add(plYellow);
 
     const plPurple = new THREE.PointLight(0x8a2be2, 80);
     plPurple.position.set(2.5, 3, -3);
@@ -70,42 +77,59 @@ function addLights(scene) {
     scene.add(plBlue);
 }
 
-function setupKeyboardControls() {
-    document.addEventListener("keydown", (e) => {
-        const key = e.key;
-        switch (key) {
-            case " ": // space
-                playAudio("welcome");
-                break;
-            case "a":
-                playAudio("about_me");
-                break;
+function setupInputText() {
+    const lang = "pt";
+
+    const audioMap = {
+        'olá': `welcome_${lang}-0`,
+        'oi': `welcome_${lang}-0`,
+        'tudo bem?': `welcome_${lang}-0`,
+        'unknown': `unknown_${lang}-0`,
+    };
+
+    const inputText = document.getElementById('inputText');
+    inputText.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            const value = event.target.value.toLowerCase();
+            console.log(value);
+            const audioFile = audioMap[value] || audioMap['unknown'];
+            playAudio(audioFile);
+            event.target.value = "";
         }
     });
 }
+
 
 /**
  * Force camera to get smoothly back to the initial position and rotation
  * @returns {void}
  */
-function updateCamera() {
+function updateCamera(delta) {
     const targetPosition = new THREE.Vector3(...config.CAMERA_POSITION);
-    const lerp = 0.05;
-    camera.position.lerp(targetPosition, lerp);
+    if (camera.position.distanceTo(targetPosition) > 0.01) {
+        const step = Math.min(Math.max(delta, 1 / 60), 1 / 10) * 2.0;
+        camera.position.lerp(targetPosition, step * 1);
+    }
 }
+
 
 function animate() {
     requestAnimationFrame(animate);
+    stats.begin();
     const delta = clock.getDelta();
     updateAvatar(delta, camera);
-    updateCamera();
+    if (!controlsActive) {
+        updateCamera(delta);
+        controls.update();
+    }
     renderer.render(scene, camera);
-    controls.update();
+    stats.end();
 }
 
 init();
 addLights(scene);
 addAvatar(scene);
-setupKeyboardControls();
+setupInputText();
 setupInspector();
 animate();
