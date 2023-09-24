@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "soundFile": "/mnt/c/Users/guilh/Documents/Code/Javascript/3d-resume/utils/../src/assets/audios/welcome_en-0.ogg",
+    "duration": 1.25
+  },
+  "mouthCues": [
+    { "start": 0.00, "end": 0.17, "value": "X" },
+    { "start": 0.17, "end": 0.27, "value": "C" },
+    { "start": 0.27, "end": 0.41, "value": "E" },
+    { "start": 0.41, "end": 0.48, "value": "F" },
+    { "start": 0.48, "end": 0.69, "value": "B" },
+    { "start": 0.69, "end": 0.76, "value": "C" },
+    { "start": 0.76, "end": 0.83, "value": "D" },
+    { "start": 0.83, "end": 1.18, "value": "F" },
+    { "start": 1.18, "end": 1.25, "value": "X" }
+  ]
+}

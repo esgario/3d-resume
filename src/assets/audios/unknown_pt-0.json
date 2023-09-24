@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "soundFile": "/mnt/c/Users/guilh/Documents/Code/Javascript/3d-resume/utils/../src/assets/audios/unknown_pt-0.ogg",
+    "duration": 1.38
+  },
+  "mouthCues": [
+    { "start": 0.00, "end": 0.19, "value": "X" },
+    { "start": 0.19, "end": 0.39, "value": "F" },
+    { "start": 0.39, "end": 0.47, "value": "A" },
+    { "start": 0.47, "end": 0.61, "value": "B" },
+    { "start": 0.61, "end": 0.68, "value": "E" },
+    { "start": 0.68, "end": 1.17, "value": "B" },
+    { "start": 1.17, "end": 1.38, "value": "X" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "welcome": {
+    "pt": ["Olá, como vai?"],
+    "en": ["Hello, how are you?"]
+  },
+  "unknown": {
+    "pt": ["Desculpe, não entendi."],
+    "en": ["Sorry, I didn't understand."]
+  }
+}
