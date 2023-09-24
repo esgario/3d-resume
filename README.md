@@ -3,13 +3,13 @@
 Run the following command to start the development server:
 
 ```
-npx vite src
+npx vite src --host 0.0.0.0
 ```
 
 Building the project with parcel:
 
 ```
-npx parcel build src/index.html
+npx parcel build src/index.html --public-url ./
 ```
 
 Formatting the code:

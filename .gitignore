@@ -130,4 +130,8 @@ dist
 .pnp.*
 
 # others
-Rhubarb
+Rhubarb*
+
+# Python
+*.pyc
+__pycache__/
