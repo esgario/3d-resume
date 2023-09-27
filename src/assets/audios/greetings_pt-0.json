@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/greetings_pt-0.json",
+        "duration": 2.32,
+        "text": "Estou \u00f3timo, obrigado por perguntar."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.09,
+            "value": "X"
+        },
+        {
+            "start": 0.09,
+            "end": 0.2,
+            "value": "B"
+        },
+        {
+            "start": 0.2,
+            "end": 0.48,
+            "value": "F"
+        },
+        {
+            "start": 0.48,
+            "end": 0.55,
+            "value": "D"
+        },
+        {
+            "start": 0.55,
+            "end": 0.62,
+            "value": "B"
+        },
+        {
+            "start": 0.62,
+            "end": 0.7,
+            "value": "A"
+        },
+        {
+            "start": 0.7,
+            "end": 0.78,
+            "value": "E"
+        },
+        {
+            "start": 0.78,
+            "end": 1.12,
+            "value": "C"
+        },
+        {
+            "start": 1.12,
+            "end": 1.46,
+            "value": "B"
+        },
+        {
+            "start": 1.46,
+            "end": 1.57,
+            "value": "A"
+        },
+        {
+            "start": 1.57,
+            "end": 1.67,
+            "value": "E"
+        },
+        {
+            "start": 1.67,
+            "end": 1.74,
+            "value": "C"
+        },
+        {
+            "start": 1.74,
+            "end": 1.81,
+            "value": "B"
+        },
+        {
+            "start": 1.81,
+            "end": 1.95,
+            "value": "C"
+        },
+        {
+            "start": 1.95,
+            "end": 2.09,
+            "value": "B"
+        },
+        {
+            "start": 2.09,
+            "end": 2.32,
+            "value": "X"
+        }
+    ]
+}

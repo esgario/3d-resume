@@ -1,0 +1,59 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/greetings_en-0.json",
+        "duration": 1.56,
+        "text": "I'm great, thanks for asking."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.14,
+            "value": "X"
+        },
+        {
+            "start": 0.14,
+            "end": 0.16,
+            "value": "C"
+        },
+        {
+            "start": 0.16,
+            "end": 0.23,
+            "value": "A"
+        },
+        {
+            "start": 0.23,
+            "end": 0.7,
+            "value": "B"
+        },
+        {
+            "start": 0.7,
+            "end": 0.84,
+            "value": "C"
+        },
+        {
+            "start": 0.84,
+            "end": 0.91,
+            "value": "B"
+        },
+        {
+            "start": 0.91,
+            "end": 0.98,
+            "value": "G"
+        },
+        {
+            "start": 0.98,
+            "end": 1.12,
+            "value": "C"
+        },
+        {
+            "start": 1.12,
+            "end": 1.47,
+            "value": "B"
+        },
+        {
+            "start": 1.47,
+            "end": 1.56,
+            "value": "X"
+        }
+    ]
+}

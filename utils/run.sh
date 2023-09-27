@@ -1,3 +1,4 @@
-python utils/text_to_speech.py
-python utils/convert_audio.py
-python utils/generate_lipsync.py
+python utils/0_generate_embeddings.py
+python utils/1_text_to_speech.py
+python utils/2_convert_audio.py
+python utils/3_generate_lipsync.py

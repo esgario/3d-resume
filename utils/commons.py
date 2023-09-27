@@ -1,16 +1,30 @@
+import os
 import json
 import logging
+from contextlib import contextmanager
+
+ASSETS_PATH = "../src/assets"
+AUDIOS_PATH = "../src/assets/audios"
+REFERENCE_PATH = "../src/assets/audios_reference.json"
 
 
-def get_audios(reference_path):
+@contextmanager
+def workdir():
+    """Change dir to the current file's directory using context manager"""
+    original_dir = os.getcwd()
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    yield
+    os.chdir(original_dir)
+
+
+def get_audios():
     """Get audios from reference file"""
-    with open(reference_path, "r") as file:
+    with open(REFERENCE_PATH, "r") as file:
         audios_reference = json.load(file)
 
-    for audio_name, texts_by_language in audios_reference.items():
-        for lang, texts in texts_by_language.items():
-            for i, text in enumerate(texts):
-                yield audio_name, lang, i, text
+    for lang, content in audios_reference.items():
+        for audio_name, texts in content.items():
+            yield lang, audio_name, texts["answers"], texts["questions"]
 
 
 def get_logger(name):

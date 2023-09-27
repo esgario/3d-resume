@@ -1,3 +1,4 @@
 elevenlabs
 pydub
 python-dotenv
+sentence-transformers

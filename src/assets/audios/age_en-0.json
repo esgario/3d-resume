@@ -1,0 +1,59 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/age_en-0.json",
+        "duration": 1.28,
+        "text": "I'm 30 years old."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.17,
+            "value": "X"
+        },
+        {
+            "start": 0.17,
+            "end": 0.25,
+            "value": "C"
+        },
+        {
+            "start": 0.25,
+            "end": 0.33,
+            "value": "A"
+        },
+        {
+            "start": 0.33,
+            "end": 0.4,
+            "value": "B"
+        },
+        {
+            "start": 0.4,
+            "end": 0.47,
+            "value": "E"
+        },
+        {
+            "start": 0.47,
+            "end": 0.82,
+            "value": "B"
+        },
+        {
+            "start": 0.82,
+            "end": 0.96,
+            "value": "E"
+        },
+        {
+            "start": 0.96,
+            "end": 1.03,
+            "value": "F"
+        },
+        {
+            "start": 1.03,
+            "end": 1.17,
+            "value": "B"
+        },
+        {
+            "start": 1.17,
+            "end": 1.28,
+            "value": "X"
+        }
+    ]
+}

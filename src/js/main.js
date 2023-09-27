@@ -2,15 +2,15 @@ import * as THREE from "three";
 import { config } from "./config.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { addAvatar, updateAvatar, playAudio } from "./avatar.js";
-import Stats from 'stats.js';
+import { generateEmbedding, getMostSimilarEmbedding } from "./text_embedding.js";
+import Stats from "stats.js";
 
-let scene, camera, renderer, controls, clock;
+let scene, camera, renderer, controls, clock, embeddings;
 let controlsActive = false;
 
-const stats = new Stats()
+const stats = new Stats();
 // stats.showPanel(0) // 0: fps, 1: ms, 2: mb, 3+: custom
 // document.body.appendChild(stats.dom)
-
 
 /**
  * Initializes the scene, camera, renderer, and controls.
@@ -37,10 +37,19 @@ function init() {
 
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enablePan = false;
-    controls.addEventListener('start', () => controlsActive = true);
-    controls.addEventListener('end', () => controlsActive = false);
+    controls.addEventListener("start", () => (controlsActive = true));
+    controls.addEventListener("end", () => (controlsActive = false));
 
-    window.addEventListener('resize', onResize, false);
+    window.addEventListener("resize", onResize, false);
+
+    fetch("assets/embeddings.json")
+        .then((res) => res.json())
+        .then((data) => {
+            embeddings = data;
+        })
+        .catch((err) => {
+            console.error(err);
+        });
 }
 
 function onResize() {
@@ -80,26 +89,26 @@ function addLights(scene) {
 function setupInputText() {
     const lang = "pt";
 
-    const audioMap = {
-        'olá': `welcome_${lang}-0`,
-        'oi': `welcome_${lang}-0`,
-        'tudo bem?': `welcome_${lang}-0`,
-        'unknown': `unknown_${lang}-0`,
-    };
-
-    const inputText = document.getElementById('inputText');
-    inputText.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
+    const inputText = document.getElementById("inputText");
+    inputText.addEventListener("keydown", async (event) => {
+        if (event.key === "Enter") {
             event.preventDefault();
             const value = event.target.value.toLowerCase();
-            console.log(value);
-            const audioFile = audioMap[value] || audioMap['unknown'];
-            playAudio(audioFile);
-            event.target.value = "";
+
+            generateEmbedding(value)
+                .then((embedding) => {
+                    const audioKey = getMostSimilarEmbedding(embedding, embeddings[lang]);
+                    const audioMap = `${audioKey}_${lang}-0`;
+                    const audioFile = audioMap;
+                    playAudio(audioFile);
+                    event.target.value = "";
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
         }
     });
 }
-
 
 /**
  * Force camera to get smoothly back to the initial position and rotation
@@ -112,7 +121,6 @@ function updateCamera(delta) {
         camera.position.lerp(targetPosition, step * 1);
     }
 }
-
 
 function animate() {
     requestAnimationFrame(animate);
