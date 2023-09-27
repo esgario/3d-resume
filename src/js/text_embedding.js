@@ -1,12 +1,9 @@
-import { pipeline, cos_sim } from "https://cdn.jsdelivr.net/npm/@xenova/transformers@2.5.0";
+import { pipeline, cos_sim } from "@xenova/transformers";
 
 // Create a pipeline with the feature-extraction and gte-small components
 const pipe = await pipeline("feature-extraction", "Supabase/gte-small");
 
-console.log(cos_sim);
-
 async function generateEmbedding(text) {
-
     // Generate the embedding from text
     const output = await pipe(text, {
         pooling: "mean",
@@ -19,7 +16,7 @@ async function generateEmbedding(text) {
     return embedding;
 }
 
-function getMostSimilarEmbedding(embedding, ref_embeddings, threshold=0.835) {
+function getMostSimilarEmbedding(embedding, ref_embeddings, threshold = 0.835) {
     let max_sim = -1;
     let max_sim_idx = -1;
 

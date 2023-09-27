@@ -24,7 +24,13 @@
         },
         "greetings": {
             "answers": ["I'm great, thanks for asking."],
-            "questions": ["Hello, how are you?", "How are you?", "How's it going?", "Are you okay?", "How are you doing?"]
+            "questions": [
+                "Hello, how are you?",
+                "How are you?",
+                "How's it going?",
+                "Are you okay?",
+                "How are you doing?"
+            ]
         },
         "age": {
             "answers": ["I'm 30 years old."],
@@ -35,5 +41,4 @@
             "questions": null
         }
     }
-
 }
