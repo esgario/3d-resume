@@ -1,0 +1,62 @@
+{
+    "pt": {
+        "hello": {
+            "answers": ["Olá, tudo bem?"],
+            "questions": ["Olá", "Oi", "Olá, boa noite", "Olá, boa tarde", "Olá, bom dia", "E aí"]
+        },
+        "greetings": {
+            "answers": ["Estou ótimo, obrigado por perguntar."],
+            "questions": ["Olá, tudo bem?", "Como vai você?", "E aí, tudo certo?", "Você está bem?", "Como você está?"]
+        },
+        "age": {
+            "answers": ["Eu tenho 30 anos."],
+            "questions": ["Quantos anos você tem?", "Qual a sua idade?"]
+        },
+        "who_are_you": {
+            "answers": ["Meu nome é José Guilherme"],
+            "questions": ["Quem é você?", "Qual o seu nome?"]
+        },
+        "what_are_you": {
+            "answers": ["Eu sou um avatar 3d capaz de responder perguntas sobre o meu currículo."],
+            "questions": ["O que você é?", "O que você faz?"]
+        },
+        "tell_me_about_yourself": {
+            "answers": ["Essa é uma boa pergunta. Mas ainda não estou pronto para responde-la."],
+            "questions": ["Me fale sobre você", "Fale sobre você", "Me conte um pouco sobre você"]
+        },
+        "unknown": {
+            "answers": ["Desculpe, não entendi."],
+            "questions": null
+        }
+    },
+    "en": {
+        "hello": {
+            "answers": ["Hello, how are you?"],
+            "questions": ["Hello", "Hi", "What's up"]
+        },
+        "greetings": {
+            "answers": ["I'm great, thanks for asking."],
+            "questions": ["Hello, how are you?", "Are you okay?", "How are you doing?"]
+        },
+        "age": {
+            "answers": ["I'm 30 years old."],
+            "questions": ["How old are you?"]
+        },
+        "who_are_you": {
+            "answers": ["My name is José Guilherme"],
+            "questions": ["Who are you?", "What's your name?"]
+        },
+        "what_are_you": {
+            "answers": ["I'm a 3d avatar capable of answering questions about my resume."],
+            "questions": ["What are you?", "What do you do?"]
+        },
+        "tell_me_about_yourself": {
+            "answers": ["That's a good question. But I'm not ready to answer it yet."],
+            "questions": ["Tell me about yourself"]
+        },
+        "unknown": {
+            "answers": ["Sorry, I didn't understand."],
+            "questions": null
+        }
+    }
+}

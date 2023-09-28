@@ -2,7 +2,7 @@
 import os
 import json
 import subprocess
-from commons import get_audios, get_logger, workdir, AUDIOS_PATH
+from commons import get_texts, get_logger, workdir, make_audio_path
 
 logger = get_logger(__name__)
 
@@ -26,10 +26,10 @@ def download_rhubarb():
 def run_rhubarb():
     """Generate lipsync data using rhubarb"""
 
-    for lang, audio_name, answers, _ in get_audios():
+    for lang, key, answers, _ in get_texts():
         for i, text in enumerate(answers):
-            audio_path = f"{AUDIOS_PATH}/{audio_name}_{lang}-{i}.ogg"
-            json_path = f"{AUDIOS_PATH}/{audio_name}_{lang}-{i}.json"
+            audio_path = make_audio_path(lang, key, i, "ogg")
+            json_path = make_audio_path(lang, key, i, "json")
 
             if os.path.exists(json_path):
                 with open(json_path, "r", encoding="utf-8") as file:

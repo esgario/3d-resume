@@ -5,7 +5,8 @@ from contextlib import contextmanager
 
 ASSETS_PATH = "../src/assets"
 AUDIOS_PATH = "../src/assets/audios"
-REFERENCE_PATH = "../src/assets/audios_reference.json"
+TEXTS_PATH = "../src/assets/texts.json"
+EMBEDDINGS_PATH = "../src/assets/embeddings.json"
 
 
 @contextmanager
@@ -17,14 +18,14 @@ def workdir():
     os.chdir(original_dir)
 
 
-def get_audios():
-    """Get audios from reference file"""
-    with open(REFERENCE_PATH, "r") as file:
-        audios_reference = json.load(file)
+def get_texts():
+    """Get texts json file"""
+    with open(TEXTS_PATH, "r") as file:
+        data = json.load(file)
 
-    for lang, content in audios_reference.items():
-        for audio_name, texts in content.items():
-            yield lang, audio_name, texts["answers"], texts["questions"]
+    for lang, content in data.items():
+        for key, texts in content.items():
+            yield lang, key, texts["answers"], texts["questions"]
 
 
 def get_logger(name):
@@ -39,3 +40,8 @@ def get_logger(name):
     handler.setFormatter(formatter)
     logger.addHandler(handler)
     return logger
+
+
+def make_audio_path(lang, key, i, fmt):
+    """Make audio path"""
+    return f"{AUDIOS_PATH}/{key}_{lang}-{i}.{fmt}"

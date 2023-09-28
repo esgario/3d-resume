@@ -16,18 +16,22 @@ async function generateEmbedding(text) {
     return embedding;
 }
 
-function getMostSimilarEmbedding(embedding, ref_embeddings, threshold = 0.835) {
+function getMostSimilarEmbedding(embedding, ref_embeddings, threshold = 0.93) {
     let max_sim = -1;
     let max_sim_idx = -1;
 
     // ref_embeddings is a dictionary
-    for (const [idx, ref_embedding] of Object.entries(ref_embeddings)) {
-        const sim = cos_sim(embedding, ref_embedding);
-        if (sim > max_sim) {
-            max_sim = sim;
-            max_sim_idx = idx;
+    for (const [idx, emb_array] of Object.entries(ref_embeddings)) {
+        for (const emb of emb_array) {
+            const sim = cos_sim(embedding, emb);
+            if (sim > max_sim) {
+                max_sim = sim;
+                max_sim_idx = idx;
+            }
         }
     }
+
+    console.log(max_sim);
 
     if (max_sim < threshold) {
         return "unknown";

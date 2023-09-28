@@ -1,0 +1,174 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/what_are_you_pt-0.json",
+        "duration": 4.17,
+        "text": "Eu sou um avatar 3d capaz de responder perguntas sobre o meu curr\u00edculo."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.2,
+            "value": "X"
+        },
+        {
+            "start": 0.2,
+            "end": 0.25,
+            "value": "E"
+        },
+        {
+            "start": 0.25,
+            "end": 0.43,
+            "value": "B"
+        },
+        {
+            "start": 0.43,
+            "end": 0.57,
+            "value": "F"
+        },
+        {
+            "start": 0.57,
+            "end": 0.64,
+            "value": "B"
+        },
+        {
+            "start": 0.64,
+            "end": 0.71,
+            "value": "G"
+        },
+        {
+            "start": 0.71,
+            "end": 0.79,
+            "value": "A"
+        },
+        {
+            "start": 0.79,
+            "end": 0.9,
+            "value": "D"
+        },
+        {
+            "start": 0.9,
+            "end": 1.32,
+            "value": "B"
+        },
+        {
+            "start": 1.32,
+            "end": 1.39,
+            "value": "C"
+        },
+        {
+            "start": 1.39,
+            "end": 1.46,
+            "value": "B"
+        },
+        {
+            "start": 1.46,
+            "end": 1.53,
+            "value": "C"
+        },
+        {
+            "start": 1.53,
+            "end": 1.61,
+            "value": "A"
+        },
+        {
+            "start": 1.61,
+            "end": 1.68,
+            "value": "C"
+        },
+        {
+            "start": 1.68,
+            "end": 2.02,
+            "value": "B"
+        },
+        {
+            "start": 2.02,
+            "end": 2.16,
+            "value": "E"
+        },
+        {
+            "start": 2.16,
+            "end": 2.3,
+            "value": "B"
+        },
+        {
+            "start": 2.3,
+            "end": 2.38,
+            "value": "A"
+        },
+        {
+            "start": 2.38,
+            "end": 2.45,
+            "value": "E"
+        },
+        {
+            "start": 2.45,
+            "end": 2.52,
+            "value": "B"
+        },
+        {
+            "start": 2.52,
+            "end": 2.66,
+            "value": "C"
+        },
+        {
+            "start": 2.66,
+            "end": 2.87,
+            "value": "F"
+        },
+        {
+            "start": 2.87,
+            "end": 2.94,
+            "value": "B"
+        },
+        {
+            "start": 2.94,
+            "end": 3.02,
+            "value": "A"
+        },
+        {
+            "start": 3.02,
+            "end": 3.19,
+            "value": "F"
+        },
+        {
+            "start": 3.19,
+            "end": 3.27,
+            "value": "A"
+        },
+        {
+            "start": 3.27,
+            "end": 3.46,
+            "value": "B"
+        },
+        {
+            "start": 3.46,
+            "end": 3.53,
+            "value": "F"
+        },
+        {
+            "start": 3.53,
+            "end": 3.74,
+            "value": "B"
+        },
+        {
+            "start": 3.74,
+            "end": 3.81,
+            "value": "F"
+        },
+        {
+            "start": 3.81,
+            "end": 3.88,
+            "value": "C"
+        },
+        {
+            "start": 3.88,
+            "end": 3.95,
+            "value": "H"
+        },
+        {
+            "start": 3.95,
+            "end": 4.17,
+            "value": "X"
+        }
+    ]
+}

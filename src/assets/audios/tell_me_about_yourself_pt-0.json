@@ -1,0 +1,149 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/tell_me_about_yourself_pt-0.json",
+        "duration": 3.99,
+        "text": "Essa \u00e9 uma boa pergunta. Mas ainda n\u00e3o estou pronto para responde-la."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.19,
+            "value": "X"
+        },
+        {
+            "start": 0.19,
+            "end": 0.32,
+            "value": "C"
+        },
+        {
+            "start": 0.32,
+            "end": 0.46,
+            "value": "B"
+        },
+        {
+            "start": 0.46,
+            "end": 0.53,
+            "value": "C"
+        },
+        {
+            "start": 0.53,
+            "end": 0.6,
+            "value": "B"
+        },
+        {
+            "start": 0.6,
+            "end": 0.67,
+            "value": "C"
+        },
+        {
+            "start": 0.67,
+            "end": 0.69,
+            "value": "A"
+        },
+        {
+            "start": 0.69,
+            "end": 0.76,
+            "value": "E"
+        },
+        {
+            "start": 0.76,
+            "end": 0.83,
+            "value": "A"
+        },
+        {
+            "start": 0.83,
+            "end": 0.94,
+            "value": "C"
+        },
+        {
+            "start": 0.94,
+            "end": 1.02,
+            "value": "A"
+        },
+        {
+            "start": 1.02,
+            "end": 1.54,
+            "value": "B"
+        },
+        {
+            "start": 1.54,
+            "end": 1.93,
+            "value": "X"
+        },
+        {
+            "start": 1.93,
+            "end": 2.01,
+            "value": "A"
+        },
+        {
+            "start": 2.01,
+            "end": 2.27,
+            "value": "B"
+        },
+        {
+            "start": 2.27,
+            "end": 2.34,
+            "value": "C"
+        },
+        {
+            "start": 2.34,
+            "end": 2.42,
+            "value": "A"
+        },
+        {
+            "start": 2.42,
+            "end": 2.48,
+            "value": "E"
+        },
+        {
+            "start": 2.48,
+            "end": 2.6,
+            "value": "F"
+        },
+        {
+            "start": 2.6,
+            "end": 2.67,
+            "value": "E"
+        },
+        {
+            "start": 2.67,
+            "end": 2.75,
+            "value": "A"
+        },
+        {
+            "start": 2.75,
+            "end": 3.03,
+            "value": "C"
+        },
+        {
+            "start": 3.03,
+            "end": 3.11,
+            "value": "A"
+        },
+        {
+            "start": 3.11,
+            "end": 3.39,
+            "value": "B"
+        },
+        {
+            "start": 3.39,
+            "end": 3.46,
+            "value": "E"
+        },
+        {
+            "start": 3.46,
+            "end": 3.54,
+            "value": "A"
+        },
+        {
+            "start": 3.54,
+            "end": 3.8,
+            "value": "C"
+        },
+        {
+            "start": 3.8,
+            "end": 3.99,
+            "value": "X"
+        }
+    ]
+}

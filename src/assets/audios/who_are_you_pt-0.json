@@ -1,0 +1,59 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/who_are_you_pt-0.json",
+        "duration": 1.61,
+        "text": "Meu nome \u00e9 Jos\u00e9 Guilherme"
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.2,
+            "value": "X"
+        },
+        {
+            "start": 0.2,
+            "end": 0.28,
+            "value": "C"
+        },
+        {
+            "start": 0.28,
+            "end": 0.35,
+            "value": "F"
+        },
+        {
+            "start": 0.35,
+            "end": 0.43,
+            "value": "A"
+        },
+        {
+            "start": 0.43,
+            "end": 0.51,
+            "value": "D"
+        },
+        {
+            "start": 0.51,
+            "end": 0.59,
+            "value": "A"
+        },
+        {
+            "start": 0.59,
+            "end": 0.84,
+            "value": "B"
+        },
+        {
+            "start": 0.84,
+            "end": 0.91,
+            "value": "C"
+        },
+        {
+            "start": 0.91,
+            "end": 1.4,
+            "value": "B"
+        },
+        {
+            "start": 1.4,
+            "end": 1.61,
+            "value": "X"
+        }
+    ]
+}

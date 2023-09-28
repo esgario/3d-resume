@@ -1,0 +1,109 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/tell_me_about_yourself_en-0.json",
+        "duration": 3.0,
+        "text": "That's a good question. But I'm not ready to answer it yet."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.2,
+            "value": "X"
+        },
+        {
+            "start": 0.2,
+            "end": 0.32,
+            "value": "B"
+        },
+        {
+            "start": 0.32,
+            "end": 0.39,
+            "value": "C"
+        },
+        {
+            "start": 0.39,
+            "end": 0.6,
+            "value": "B"
+        },
+        {
+            "start": 0.6,
+            "end": 0.67,
+            "value": "F"
+        },
+        {
+            "start": 0.67,
+            "end": 0.74,
+            "value": "C"
+        },
+        {
+            "start": 0.74,
+            "end": 0.88,
+            "value": "B"
+        },
+        {
+            "start": 0.88,
+            "end": 1.02,
+            "value": "C"
+        },
+        {
+            "start": 1.02,
+            "end": 1.61,
+            "value": "X"
+        },
+        {
+            "start": 1.61,
+            "end": 1.72,
+            "value": "C"
+        },
+        {
+            "start": 1.72,
+            "end": 1.8,
+            "value": "A"
+        },
+        {
+            "start": 1.8,
+            "end": 1.86,
+            "value": "D"
+        },
+        {
+            "start": 1.86,
+            "end": 2.12,
+            "value": "B"
+        },
+        {
+            "start": 2.12,
+            "end": 2.19,
+            "value": "F"
+        },
+        {
+            "start": 2.19,
+            "end": 2.4,
+            "value": "C"
+        },
+        {
+            "start": 2.4,
+            "end": 2.47,
+            "value": "B"
+        },
+        {
+            "start": 2.47,
+            "end": 2.61,
+            "value": "E"
+        },
+        {
+            "start": 2.61,
+            "end": 2.75,
+            "value": "C"
+        },
+        {
+            "start": 2.75,
+            "end": 2.89,
+            "value": "B"
+        },
+        {
+            "start": 2.89,
+            "end": 3.0,
+            "value": "X"
+        }
+    ]
+}
