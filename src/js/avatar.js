@@ -7,8 +7,12 @@ let model, mixer, rightEye, leftEye, mouthCues, audio;
 
 function addModelToScene(model, scene) {
     scene.add(model);
+    // Remove loading spinner
     const spinner = document.querySelector(".spinner-border");
     spinner.parentNode.removeChild(spinner);
+    // Show form
+    const formContainer = document.getElementById("form-container");
+    formContainer.style.visibility = "visible";
 }
 
 function addAvatar(scene) {
