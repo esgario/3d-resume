@@ -5,7 +5,7 @@ import { addAvatar, updateAvatar, playAudio } from "./avatar.js";
 import { generateEmbedding, getMostSimilarEmbedding } from "./text_embedding.js";
 import Stats from "stats.js";
 
-let scene, camera, renderer, controls, clock, embeddings;
+let scene, camera, renderer, controls, clock, embeddings, lang;
 let controlsActive = false;
 
 const stats = new Stats();
@@ -50,6 +50,8 @@ function init() {
         .catch((err) => {
             console.error(err);
         });
+
+    lang = "en";
 }
 
 function onResize() {
@@ -86,14 +88,22 @@ function addLights(scene) {
     scene.add(plBlue);
 }
 
-function setupInputText() {
-    const lang = "pt";
+function getCurrentLanguage() {
+    const langDiv = document.getElementById("pt-lang");
+    if (langDiv.classList.contains("chosen")) {
+        return "pt";
+    } else {
+        return "en";
+    }
+}
 
+function setupInputText() {
     const inputText = document.getElementById("inputText");
     inputText.addEventListener("keydown", async (event) => {
         if (event.key === "Enter") {
             event.preventDefault();
             const value = event.target.value.toLowerCase();
+            lang = getCurrentLanguage();
 
             generateEmbedding(value)
                 .then((embedding) => {
