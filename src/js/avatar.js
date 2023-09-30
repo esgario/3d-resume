@@ -22,7 +22,7 @@ function addAvatar(scene) {
     };
 
     const gltfloader = new GLTFLoader(loadingManager);
-    gltfloader.load(`${config.MODELS_PATH}/avatar.glb`, (result) => {
+    gltfloader.load(config.AVATAR_PATH, (result) => {
         model = result.scene;
         model.position.set(0, -1.5, 0);
         model.traverse((n) => {

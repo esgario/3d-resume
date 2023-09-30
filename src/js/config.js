@@ -1,7 +1,8 @@
 export const config = {
     AUDIOS_PATH: "assets/audios",
-    MODELS_PATH: "assets/models",
+    AVATAR_PATH: "assets/models/avatar.glb",
     ANIMATIONS_PATH: "assets/animations",
+    EMBEDDINGS_PATH: "assets/embeddings.json",
     MOTION_AMPLITUDE: 0.95,
     LIPSYNC_CORRESPONDENCE: {
         default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

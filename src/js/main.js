@@ -42,7 +42,7 @@ function init() {
 
     window.addEventListener("resize", onResize, false);
 
-    fetch("assets/embeddings.json")
+    fetch(config.EMBEDDINGS_PATH)
         .then((res) => res.json())
         .then((data) => {
             embeddings = data;

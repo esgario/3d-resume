@@ -47,7 +47,9 @@ def run_rhubarb():
                 json_path,
             ]
 
-            logger.info("Generating lipsync data for %s to %s" % (audio_path, json_path))
+            logger.info(
+                "Generating lipsync data for %s to %s" % (audio_path, json_path)
+            )
 
             rhubarb_process = subprocess.Popen(
                 rhubarb_command,

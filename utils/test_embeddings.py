@@ -2,8 +2,9 @@ from collections import defaultdict
 from sentence_transformers import SentenceTransformer, util
 from commons import get_texts, workdir
 
-model_name = 'Supabase/gte-small'
+model_name = "Supabase/gte-small"
 model = SentenceTransformer(model_name)
+
 
 def get_embeddings():
     """Get embeddings"""
@@ -16,6 +17,7 @@ def get_embeddings():
             for text in questions:
                 embeddings[lang][key].append(model.encode(text, convert_to_tensor=True))
         return embeddings
+
 
 embeddings = get_embeddings()
 
