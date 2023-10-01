@@ -2,7 +2,13 @@
 import os
 import json
 import subprocess
-from commons import get_texts, get_logger, workdir, make_audio_path
+from commons import (
+    get_texts,
+    get_logger,
+    workdir,
+    make_audio_path,
+    check_already_processed,
+)
 
 logger = get_logger(__name__)
 
@@ -31,12 +37,9 @@ def run_rhubarb():
             audio_path = make_audio_path(lang, key, i, "ogg")
             json_path = make_audio_path(lang, key, i, "json")
 
-            if os.path.exists(json_path):
-                with open(json_path, "r", encoding="utf-8") as file:
-                    data = json.load(file)
-                if data["metadata"].get("text", "") == text:
-                    logger.info("%s already exists, skipping" % json_path)
-                    continue
+            if check_already_processed(json_path, text):
+                logger.info("%s already exists, skipping" % json_path)
+                continue
 
             rhubarb_command = [
                 f"{RHUBARB_FILE}/rhubarb",

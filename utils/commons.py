@@ -45,3 +45,13 @@ def get_logger(name):
 def make_audio_path(lang, key, i, fmt):
     """Make audio path"""
     return f"{AUDIOS_PATH}/{key}_{lang}-{i}.{fmt}"
+
+
+def check_already_processed(json_path: str, text: str):
+    """Check if audios are already processed"""
+    if os.path.exists(json_path):
+        with open(json_path, "r", encoding="utf-8") as file:
+            data = json.load(file)
+        if data["metadata"].get("text", "") == text:
+            return True
+    return False
