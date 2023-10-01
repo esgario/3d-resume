@@ -3,6 +3,7 @@ import { config } from "./config.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { addAvatar, updateAvatar, playAudio } from "./avatar.js";
 import { generateEmbedding, getMostSimilarEmbedding } from "./text_embedding.js";
+import { setupChangeLanguage, getCurrentLanguage } from "./language.js";
 import Stats from "stats.js";
 
 let scene, camera, renderer, controls, clock, embeddings, lang;
@@ -88,15 +89,6 @@ function addLights(scene) {
     scene.add(plBlue);
 }
 
-function getCurrentLanguage() {
-    const langDiv = document.getElementById("pt-lang");
-    if (langDiv.classList.contains("chosen")) {
-        return "pt";
-    } else {
-        return "en";
-    }
-}
-
 function setupInputText() {
     const inputText = document.getElementById("inputText");
     inputText.addEventListener("keydown", async (event) => {
@@ -150,4 +142,5 @@ addLights(scene);
 addAvatar(scene);
 setupInputText();
 setupInspector();
+setupChangeLanguage();
 animate();
