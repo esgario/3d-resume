@@ -2,11 +2,10 @@ import * as THREE from "three";
 import { config } from "./config.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { addAvatar, updateAvatar, playAudio } from "./avatar.js";
-import { generateEmbedding, getMostSimilarEmbedding } from "./text_embedding.js";
-import { setupChangeLanguage, getCurrentLanguage } from "./language.js";
+import { setupInputText, setupChangeLanguage, setupSpeechRecognition } from "./chatbot.js";
 import Stats from "stats.js";
 
-let scene, camera, renderer, controls, clock, embeddings, lang;
+let scene, camera, renderer, controls, clock;
 let controlsActive = false;
 
 const stats = new Stats();
@@ -42,17 +41,6 @@ function init() {
     controls.addEventListener("end", () => (controlsActive = false));
 
     window.addEventListener("resize", onResize, false);
-
-    fetch(config.EMBEDDINGS_PATH)
-        .then((res) => res.json())
-        .then((data) => {
-            embeddings = data;
-        })
-        .catch((err) => {
-            console.error(err);
-        });
-
-    lang = "en";
 }
 
 function onResize() {
@@ -89,29 +77,6 @@ function addLights(scene) {
     scene.add(plBlue);
 }
 
-function setupInputText() {
-    const inputText = document.getElementById("inputText");
-    inputText.addEventListener("keydown", async (event) => {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            const value = event.target.value.toLowerCase();
-            lang = getCurrentLanguage();
-
-            generateEmbedding(value)
-                .then((embedding) => {
-                    const audioKey = getMostSimilarEmbedding(embedding, embeddings[lang]);
-                    const audioMap = `${audioKey}_${lang}-0`;
-                    const audioFile = audioMap;
-                    playAudio(audioFile);
-                    event.target.value = "";
-                })
-                .catch((err) => {
-                    console.error(err);
-                });
-        }
-    });
-}
-
 /**
  * Force camera to get smoothly back to the initial position and rotation
  * @returns {void}
@@ -143,4 +108,5 @@ addAvatar(scene);
 setupInputText();
 setupInspector();
 setupChangeLanguage();
+setupSpeechRecognition();
 animate();

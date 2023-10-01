@@ -10,30 +10,42 @@
             integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
         <link rel="stylesheet" href="css/style.css" />
         <script type="module" src="js/main.js"></script>
     </head>
     <body style="background-color: black">
         <div id="overlay" class="text-white">
-            <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-            <div id="form-container" class="container mt-5 d-flex justify-content-center" style="visibility: hidden">
-                <div class="chooseLang">
-                    <div>
-                        <span id="pt-lang" class="lang pt-lang"></span>
-                        <span id="en-lang" class="lang en-lang chosen"></span>
-                    </div>
+            <div style="margin-left: 14px">
+                <div class="spinner-border d-flex justify-content-center" style="position: absolute" role="status">
+                    <span class="sr-only">Loading...</span>
                 </div>
 
-                <div class="form-group">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="inputText"
-                        placeholder="Enter your question here"
-                        maxlength="512"
-                    />
+                <div class="container mt-5 d-flex justify-content-center" style="visibility: visible">
+                    <div class="row pt-5">
+                        <div class="chooseLang p-1">
+                            <div>
+                                <span id="pt-lang" class="lang pt-lang"></span>
+                                <span id="en-lang" class="lang en-lang chosen"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group p-1">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="inputText"
+                                placeholder="Enter your question here"
+                                maxlength="512"
+                            />
+                        </div>
+
+                        <div class="speechDiv p-1">
+                            <button id="speechButton" class="btn btn-primary speechButton" type="button">
+                                <i id="speechIcon" class="bi bi-mic"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

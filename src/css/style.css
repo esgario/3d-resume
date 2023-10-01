@@ -21,11 +21,6 @@ canvas {
     pointer-events: none;
 }
 
-#form-container {
-    position: absolute;
-    top: 0px;
-}
-
 #inputText {
     background-color: rgba(192, 192, 192, 0.5);
     opacity: 0.8;
@@ -44,6 +39,23 @@ canvas {
     color: #222;
 }
 
+.speechDiv {
+    height: 38px;
+    margin-left: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    pointer-events: none;
+}
+
+.speechButton {
+    pointer-events: auto;
+    position: relative;
+    height: 38px;
+    border-radius: 8px;
+}
+
 .chooseLang {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -60,6 +72,7 @@ canvas {
     height: 60px;
     position: relative;
 }
+
 .lang {
     cursor: pointer;
     display: block;
