@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import { config } from "./config.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { addAvatar, updateAvatar, playAudio } from "./avatar.js";
-import { setupInputText, setupChangeLanguage, setupSpeechRecognition } from "./chatbot.js";
+import { addAvatar, updateAvatar } from "./avatar.js";
+import { setupChatbot } from "./chatbot.js";
 import Stats from "stats.js";
 
 let scene, camera, renderer, controls, clock;
@@ -105,8 +105,6 @@ function animate() {
 init();
 addLights(scene);
 addAvatar(scene);
-setupInputText();
 setupInspector();
-setupChangeLanguage();
-setupSpeechRecognition();
+setupChatbot();
 animate();

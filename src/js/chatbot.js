@@ -8,7 +8,7 @@ import { pipeline, cos_sim } from "@xenova/transformers";
 // Create a pipeline with the feature-extraction and gte-small components
 const pipe = await pipeline("feature-extraction", "Supabase/gte-small");
 
-export async function generateEmbedding(text) {
+async function generateEmbedding(text) {
     // Generate the embedding from text
     const output = await pipe(text, {
         pooling: "mean",
@@ -21,7 +21,7 @@ export async function generateEmbedding(text) {
     return embedding;
 }
 
-export function getMostSimilarEmbedding(embedding, ref_embeddings, threshold = 0.93) {
+function getMostSimilarEmbedding(embedding, ref_embeddings, threshold = 0.93) {
     let max_sim = -1;
     let max_sim_idx = -1;
 
@@ -59,14 +59,23 @@ async function askQuestion(question) {
         const audioKey = getMostSimilarEmbedding(embedding, embeddings[lang]);
         const audioMap = `${audioKey}_${lang}-0`;
         const audioFile = audioMap;
-        playAudio(audioFile);
+
+        const lastRecogState = recognitionState;
+        let callback = () => {
+            if (lastRecogState == "active") {
+                recognition.start();
+            }
+            inputText.disabled = false;
+        };
+        recognition.stop();
+        playAudio(audioFile, callback);
         return true;
     } catch (err) {
         return false;
     }
 }
 
-export function setupInputText() {
+function setupInputText() {
     fetch(config.EMBEDDINGS_PATH)
         .then((res) => res.json())
         .then((data) => {
@@ -80,7 +89,7 @@ export function setupInputText() {
         if (event.key === "Enter") {
             event.preventDefault();
             const value = event.target.value;
-
+            inputText.disabled = true;
             askQuestion(value)
                 .then((success) => {
                     if (success) {
@@ -113,7 +122,7 @@ function changeLang(language, el) {
     container.add("open");
 }
 
-export function setupChangeLanguage() {
+function setupChangeLanguage() {
     let langs = ["pt", "en"];
     for (let i = 0; i < langs.length; i++) {
         let lang = langs[i];
@@ -124,7 +133,7 @@ export function setupChangeLanguage() {
     }
 }
 
-export function getCurrentLanguage() {
+function getCurrentLanguage() {
     const langDiv = document.getElementById("pt-lang");
     if (langDiv.classList.contains("chosen")) {
         return "pt";
@@ -140,38 +149,33 @@ let recognitionState = "inactive";
 
 function setRecognitionLang(lang) {
     if (recognition) {
-        let lastState = recognitionState;
-        recognition.abort();
+        recognition.stop();
         if (lang == "pt") {
-            setTimeout(() => {
-                recognition.lang = "pt-BR";
-                if (lastState == "active") {
-                    recognition.start();
-                }
-            }, 1000);
+            recognition.lang = "pt-BR";
         } else {
-            setTimeout(() => {
-                recognition.lang = "en-US";
-                if (lastState == "active") {
-                    recognition.start();
-                }
-            }, 1000);
+            recognition.lang = "en-US";
         }
     }
 }
 
-export function setupSpeechRecognition() {
+function setupSpeechRecognition() {
     if ("webkitSpeechRecognition" in window) {
         recognition = new webkitSpeechRecognition();
         recognition.lang = "en-US";
         recognition.maxAlternatives = 1;
         recognition.interimResults = true;
         recognition.addEventListener("result", (event) => {
-            const results = event.results[event.results.length - 1];
-            inputText.value = results[0].transcript;
+            let text = "";
+            for (let i = 0; i < event.results.length; i++) {
+                if (!event.results[i].isFinal) {
+                    text += event.results[i][0].transcript;
+                }
+            }
 
-            if (results.isFinal) {
-                askQuestion(results[0].transcript)
+            if (text == "") {
+                text = event.results[event.results.length - 1][0].transcript;
+                inputText.disabled = true;
+                askQuestion(text)
                     .then((success) => {
                         if (success) {
                             setTimeout(() => {
@@ -183,6 +187,7 @@ export function setupSpeechRecognition() {
                         console.error(err);
                     });
             }
+            inputText.value = text;
         });
 
         recognition.addEventListener("start", () => {
@@ -202,8 +207,11 @@ export function setupSpeechRecognition() {
         // setup speechButton
         const speechButton = document.getElementById("speechButton");
         speechButton.onclick = () => {
-            console.log("speechButton clicked");
-            recognition.start();
+            if (recognitionState == "active") {
+                recognition.stop();
+            } else {
+                recognition.start();
+            }
         };
     } else {
         console.log("Speech recognition not supported");
@@ -216,4 +224,12 @@ export function setupSpeechRecognition() {
         const speechButton = document.getElementById("speechButton");
         speechButton.disabled = true;
     }
+}
+
+// ----------------------------------------------------------------------------------
+
+export function setupChatbot() {
+    setupInputText();
+    setupChangeLanguage();
+    setupSpeechRecognition();
 }
