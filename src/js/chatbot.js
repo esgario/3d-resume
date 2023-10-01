@@ -53,6 +53,11 @@ let embeddings,
     lang = "en";
 
 async function askQuestion(question) {
+    if (question == "") {
+        inputText.disabled = false;
+        return false;
+    }
+
     lang = getCurrentLanguage();
     try {
         const embedding = await generateEmbedding(question);
