@@ -24,12 +24,12 @@ canvas {
 #inputText {
     background-color: rgba(192, 192, 192, 0.5);
     opacity: 0.8;
-    width: 300px;
+    width: 240px;
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     border: 2px solid #ccc;
     color: #fff;
     pointer-events: auto;
@@ -92,8 +92,8 @@ canvas {
 }
 
 .open .pt-lang {
-    left: -96px;
-    top: 0px;
+    left: -48px;
+    top: 48px;
     opacity: 1;
 }
 
