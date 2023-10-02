@@ -6,11 +6,15 @@
         },
         "greetings": {
             "answers": ["Estou ótimo, obrigado por perguntar."],
-            "questions": ["Olá, tudo bem?", "Como vai você?", "E aí, tudo certo?", "Você está bem?", "Como você está?"]
+            "questions": ["Olá, tudo bem?", "Olá, como vai?", "Como vai você?", "E aí, tudo certo?", "Você está bem?", "Como você está?"]
         },
         "age": {
             "answers": ["Eu tenho 30 anos."],
             "questions": ["Quantos anos você tem?", "Qual a sua idade?"]
+        },
+        "where_are_you_from": {
+            "answers": ["Sou de Vila Velha, Espírito Santo. Mas atualmente moro em Governador Valadares, Minas Gerais."],
+            "questions": ["De onde você é?", "Onde você mora?"]
         },
         "who_are_you": {
             "answers": ["Meu nome é José Guilherme"],
@@ -18,11 +22,19 @@
         },
         "what_are_you": {
             "answers": ["Eu sou um avatar 3d capaz de responder perguntas sobre o meu currículo."],
-            "questions": ["O que você é?", "O que você faz?"]
+            "questions": ["O que você é?"]
         },
         "tell_me_about_yourself": {
-            "answers": ["Essa é uma boa pergunta. Mas ainda não estou pronto para responde-la."],
+            "answers": ["Meu nome é José Guilherme, sou formado em Engenharia de Computação e tenho mestrado em Informática. Minha trajetória profissional começou como programador de sistemas embarcados, onde desenvolvi sólidas habilidades em programação e resolução de problemas.\n Em 2017, quando ingressei no mestrado, pude aprofundar meus conhecimentos em inteligência artificial e machine learning. Durante esse período, mergulhei profundamente em projetos de pesquisa e desenvolvimento de modelos de aprendizado de máquina, especialmente voltados a visão computacional.\n Desde 2019, venho trabalhando diretamente com machine learning, aplicando meu conhecimento para resolver problemas complexos e na construção de novas soluções. Tenho grande paixão pela área e estou sempre buscando oportunidades para aplicar meu conhecimento de forma criativa e inovadora."],
             "questions": ["Me fale sobre você", "Fale sobre você", "Me conte um pouco sobre você"]
+        },
+        "strengths": {
+            "answers": ["Meus principais pontos fortes incluem minha paixão por aprender e crescer. Me considero bastante proativo e orientado a entregas. Sou capaz de concluir tarefas com rapidez e precisão. Além disso, valorizo o trabalho em equipe e estou sempre pronto para ajudar meus colegas quando necessário."],
+            "questions": ["Quais são seus pontos fortes?", "Quais são seus pontos positivos?"]
+        },
+        "weaknesses": {
+            "answers": ["Um dos meus pontos fracos é a ansiedade, que às vezes me leva a sentir impaciência em relação a alcançar resultados imediatos. No entanto, estou ciente desses aspectos e venho trabalhando para melhorar meu equilíbrio emocional e minha capacidade de lidar com pressões de forma mais tranquila."],
+            "questions": ["Quais são seus pontos fracos?", "Quais são seus pontos negativos?"]
         },
         "unknown": {
             "answers": ["Desculpe, não entendi."],
@@ -42,17 +54,29 @@
             "answers": ["I'm 30 years old."],
             "questions": ["How old are you?"]
         },
+        "where_are_you_from": {
+            "answers": ["I'm from Vila Velha, Espírito Santo. But currently, I live in Governador Valadares, Minas Gerais."],
+            "questions": ["Where are you from?", "Where do you live?"]
+        },
         "who_are_you": {
             "answers": ["My name is José Guilherme"],
             "questions": ["Who are you?", "What's your name?"]
         },
         "what_are_you": {
             "answers": ["I'm a 3d avatar capable of answering questions about my resume."],
-            "questions": ["What are you?", "What do you do?"]
+            "questions": ["What are you?"]
         },
         "tell_me_about_yourself": {
-            "answers": ["That's a good question. But I'm not ready to answer it yet."],
+            "answers": ["My name is José Guilherme, I have a degree in Computer Engineering, and I hold a master's degree in Computer Science. My professional journey began as an embedded systems programmer, where I developed strong programming skills and problem-solving abilities.\n In 2017, when I started my master's program, I had the opportunity to deepen my knowledge in artificial intelligence and machine learning. During that time, I immersed myself in research projects and the development of machine learning models, particularly focused on computer vision.\n Since 2019, I have been working directly with machine learning, applying my knowledge to tackle complex problems and create innovative solutions. I have a deep passion for this field and I'm always looking for opportunities to apply my knowledge in a creative and innovative way."],
             "questions": ["Tell me about yourself"]
+        },
+        "strengths": {
+            "answers": ["My main strengths include my passion for learning and personal growth. I consider myself highly proactive and results-oriented. I can complete tasks quickly and accurately. Furthermore, I value teamwork and am always ready to assist my colleagues when needed."],
+            "questions": ["What are your strengths?"]
+        },
+        "weaknesses": {
+            "answers": ["One of my weaknesses is anxiety, which sometimes makes me impatient for immediate results. However, I am aware of these aspects and have worked to improve my emotional balance and ability to handle pressure more calmly."],
+            "questions": ["What are your weaknesses?"]
         },
         "unknown": {
             "answers": ["Sorry, I didn't understand."],
