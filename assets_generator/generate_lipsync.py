@@ -16,7 +16,7 @@ RHUBARB_VERSION = "1.13.0"
 RHUBARB_FILE = f"Rhubarb-Lip-Sync-{RHUBARB_VERSION}-Linux"
 
 
-def download_rhubarb():
+def _download_rhubarb():
     """Download rhubarb and unzip it"""
     if os.path.exists(RHUBARB_FILE):
         logger.info("%s already exists, skipping download" % RHUBARB_FILE)
@@ -29,9 +29,8 @@ def download_rhubarb():
     subprocess.run(["unzip", RHUBARB_FILE + ".zip"], check=True)
 
 
-def run_rhubarb():
+def _generate_lipsync():
     """Generate lipsync data using rhubarb"""
-
     for lang, key, answers, _ in get_texts():
         for i, text in enumerate(answers):
             audio_path = make_audio_path(lang, key, i, "ogg")
@@ -70,6 +69,14 @@ def run_rhubarb():
                 json.dump(data, file, indent=4)
 
 
-with workdir():
-    download_rhubarb()
-    run_rhubarb()
+@workdir
+def run():
+    logger.info("Downloading rhubarb")
+    _download_rhubarb()
+
+    logger.info("Generating lipsync data")
+    _generate_lipsync()
+
+
+if __name__ == "__main__":
+    run()

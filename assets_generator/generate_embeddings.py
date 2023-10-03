@@ -1,15 +1,22 @@
 import json
 from collections import defaultdict
 from sentence_transformers import SentenceTransformer
-from commons import get_texts, get_logger, workdir, EMBEDDINGS_PATH
+from commons import get_texts, get_logger, workdir
+from settings import EMBEDDINGS_PATH
 
 logger = get_logger(__name__)
 
-model = SentenceTransformer("Supabase/gte-small")
-
 PRECISION = 6
 
-with workdir():
+
+def get_model():
+    logger.info("Loading model")
+    return SentenceTransformer("Supabase/gte-small")
+
+
+@workdir
+def run():
+    model = get_model()
     embeddings = defaultdict(dict)
     for lang, key, _, questions in get_texts():
         if questions is None:
@@ -23,3 +30,7 @@ with workdir():
 
     with open(EMBEDDINGS_PATH, "w") as file:
         json.dump(embeddings, file)
+
+
+if __name__ == "__main__":
+    run()

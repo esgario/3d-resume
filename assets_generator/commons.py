@@ -1,21 +1,20 @@
 import os
 import json
 import logging
-from contextlib import contextmanager
-
-ASSETS_PATH = "../src/assets"
-AUDIOS_PATH = "../src/assets/audios"
-TEXTS_PATH = "../src/assets/texts.json"
-EMBEDDINGS_PATH = "../src/assets/embeddings.json"
+from settings import AUDIOS_PATH, TEXTS_PATH
 
 
-@contextmanager
-def workdir():
-    """Change dir to the current file's directory using context manager"""
-    original_dir = os.getcwd()
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    yield
-    os.chdir(original_dir)
+def workdir(func):
+    """Decorator to change dir to the current file's directory"""
+
+    def wrapper(*args, **kwargs):
+        original_dir = os.getcwd()
+        os.chdir(os.path.dirname(os.path.abspath(__file__)))
+        result = func(*args, **kwargs)
+        os.chdir(original_dir)
+        return result
+
+    return wrapper
 
 
 def get_texts():
@@ -35,7 +34,7 @@ def get_logger(name):
     handler = logging.StreamHandler()
     handler.setLevel(logging.DEBUG)
     formatter = logging.Formatter(
-        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        "%(module)s :: %(levelname)s :: %(asctime)s :: %(message)s"
     )
     handler.setFormatter(formatter)
     logger.addHandler(handler)

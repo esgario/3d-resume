@@ -16,18 +16,23 @@ API_KEY = os.getenv("ELEVEN_LABS_API_KEY")
 
 set_api_key(API_KEY)
 
-with workdir():
-    for lang, key, answers, questions in get_texts():
-        logger.info(f"Processing {key}")
+
+@workdir
+def run():
+    for lang, key, answers, _ in get_texts():
         for i, text in enumerate(answers):
-            logger.info(f"\t{lang}-{i}: {text}")
+            logger.info(f"Processing {key} {lang}-{i}")
 
             audio_path = make_audio_path(lang, key, i, "mp3")
             json_path = make_audio_path(lang, key, i, "json")
 
             if check_already_processed(json_path, text):
-                logger.info("\t\tAlready processed, skipping")
+                logger.info("Already processed, skipping")
                 continue
 
             audio = generate(text=text, voice="Josh", model="eleven_multilingual_v2")
             save(audio, audio_path)
+
+
+if __name__ == "__main__":
+    run()
