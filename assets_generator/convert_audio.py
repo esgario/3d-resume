@@ -15,7 +15,7 @@ def run():
             dst_path = make_audio_path(lang, key, i, "ogg")
 
             if os.path.exists(src_path):
-                logger.info("Converting", src_path, "to", dst_path)
+                logger.info(f"Converting {src_path} to {dst_path}")
 
                 # Convert mp3 to ogg
                 sound = AudioSegment.from_file(src_path, format="mp3")
