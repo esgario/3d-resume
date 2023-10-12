@@ -126,6 +126,7 @@ function changeLang(language, el) {
             document.querySelector(".chooseLang .chosen").classList.remove("chosen");
             el.add("chosen");
             console.log(language + " chosen");
+            updateSuggestionsMenu();
             setRecognitionLang(language);
         }
         return;
@@ -228,15 +229,26 @@ function setupSpeechRecognition() {
 
 // SUGGESTIONS MENU
 // ----------------------------------------------------------------------------------
-function setupSuggestionsMenu() {
+function updateSuggestionsMenu() {
     fetch(config.TEXTS_PATH)
         .then((res) => res.json())
         .then((data) => {
-            for (const [key, value] of Object.entries(data[lang])) {
+            const suggestionsHeader = document.getElementsByClassName("suggestions-menu-header");
+            const titles = {
+                en: "Suggestions",
+                pt: "Sugestões",
+            };
+            suggestionsHeader[0].textContent = titles[getCurrentLanguage()];
+
+            const suggestionsMenu = document.getElementsByClassName("suggestions-menu-body");
+            while (suggestionsMenu[0].firstChild) {
+                suggestionsMenu[0].removeChild(suggestionsMenu[0].firstChild);
+            }
+
+            for (const [key, value] of Object.entries(data[getCurrentLanguage()])) {
                 if (value["questions"] == null) {
                     continue;
                 }
-                console.log(value["questions"][0]);
                 const button = document.createElement("button");
                 button.classList.add("btn", "btn-secondary", "sentence-button", "mb-2");
                 button.textContent = value["questions"][0];
@@ -244,8 +256,6 @@ function setupSuggestionsMenu() {
                 button.onclick = () => {
                     askQuestion(value["questions"][0]);
                 };
-
-                const suggestionsMenu = document.getElementsByClassName("suggestions-menu-body");
                 suggestionsMenu[0].appendChild(button);
             }
         })
@@ -257,7 +267,7 @@ function setupSuggestionsMenu() {
 // ----------------------------------------------------------------------------------
 
 export function setupChatbot() {
-    setupSuggestionsMenu();
+    updateSuggestionsMenu();
     setupInputText();
     setupChangeLanguage();
     setupSpeechRecognition();
