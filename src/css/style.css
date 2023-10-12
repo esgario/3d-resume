@@ -56,15 +56,21 @@ canvas {
     border-radius: 8px;
 }
 
-.chooseLang {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.topMenu {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 100%;
+    height: 38px;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    height: 100vh;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 0px;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.chooseLang {
+    position: relative;
     pointer-events: auto;
 }
 
@@ -110,4 +116,54 @@ canvas {
 .chooseLang .chosen {
     opacity: 1;
     z-index: 1;
+}
+
+.suggestions-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-100%);
+    width: 20%;
+    min-width: 180px;
+    max-width: 300px;
+    height: 300px;
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.suggestions-menu-header {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.suggestions-menu-body {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    background-color: transparent;
+    pointer-events: auto;
+}
+
+.suggestions-menu-body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.sentence-button {
+    display: block;
+    font-size: 14px;
+    border: 1px solid #000000;
+    background-color: rgba(37, 37, 37, 0.5);
+    padding: 0px 5px;
+    pointer-events: auto;
+}
+
+.sentence-button:hover {
+    background-color: rgba(37, 37, 37, 0.8);
+    border-color: #333;
 }

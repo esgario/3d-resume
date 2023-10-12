@@ -3,6 +3,7 @@ export const config = {
     AVATAR_PATH: "assets/models/avatar.glb",
     ANIMATIONS_PATH: "assets/animations",
     EMBEDDINGS_PATH: "assets/embeddings.json",
+    TEXTS_PATH: "assets/texts.json",
     MOTION_AMPLITUDE: 0.95,
     LIPSYNC_CORRESPONDENCE: {
         default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

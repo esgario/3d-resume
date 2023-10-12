@@ -231,9 +231,60 @@ function setupSpeechRecognition() {
     }
 }
 
+// SUGGESTIONS MENU
+// ----------------------------------------------------------------------------------
+function setupSuggestionsMenu() {
+    fetch(config.TEXTS_PATH)
+        .then((res) => res.json())
+        .then((data) => {
+            for (const [key, value] of Object.entries(data[lang])) {
+                if (value["questions"] == null) {
+                    continue;
+                }
+                console.log(value["questions"][0]);
+                const button = document.createElement("button");
+                button.classList.add("btn", "btn-secondary", "sentence-button", "mb-2");
+                button.textContent = value["questions"][0];
+
+                button.onclick = () => {
+                    inputText.value = value["questions"][0];
+                    inputText.disabled = true;
+                    askQuestion(value["questions"][0])
+                        .then((success) => {
+                            if (success) {
+                                setTimeout(() => {
+                                    inputText.value = "";
+                                }, 1500);
+                            }
+                        })
+                        .catch((err) => {
+                            console.error(err);
+                        });
+                };
+
+                const suggestionsMenu = document.getElementsByClassName("suggestions-menu-body");
+                suggestionsMenu[0].appendChild(button);
+            }
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+
+    // const myDiv = document.getElementById("myDiv");
+
+    // const myButton = document.createElement("button");
+    // myButton.textContent = "Click me!";
+    // myButton.onclick = () => {
+    // console.log("Button clicked!");
+    // };
+
+    // myDiv.appendChild(myButton);
+}
+
 // ----------------------------------------------------------------------------------
 
 export function setupChatbot() {
+    setupSuggestionsMenu();
     setupInputText();
     setupChangeLanguage();
     setupSpeechRecognition();
