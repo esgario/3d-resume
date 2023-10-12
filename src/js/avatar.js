@@ -11,7 +11,7 @@ function addModelToScene(model, scene) {
     const spinner = document.querySelector(".spinner-border");
     spinner.parentNode.removeChild(spinner);
     // Show form
-    const formContainer = document.getElementById("form-container");
+    const formContainer = document.getElementById("content");
     formContainer.style.visibility = "visible";
 }
 
