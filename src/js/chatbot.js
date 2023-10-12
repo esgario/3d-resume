@@ -50,7 +50,8 @@ function getMostSimilarEmbedding(embedding, ref_embeddings, threshold = 0.93) {
 
 const inputText = document.getElementById("inputText");
 let embeddings,
-    lang = "en";
+    lang = "en",
+    audioIsPlaying = false;
 
 async function askQuestion(question) {
     if (question == "") {
@@ -58,8 +59,15 @@ async function askQuestion(question) {
         return false;
     }
 
+    if (audioIsPlaying == true) {
+        return false;
+    }
+
     lang = getCurrentLanguage();
     try {
+        inputText.disabled = true;
+        inputText.value = question;
+
         const embedding = await generateEmbedding(question);
         const audioKey = getMostSimilarEmbedding(embedding, embeddings[lang]);
         const audioMap = `${audioKey}_${lang}-0`;
@@ -71,11 +79,18 @@ async function askQuestion(question) {
                 recognition.start();
             }
             inputText.disabled = false;
+            audioIsPlaying = false;
         };
         recognition.stop();
+        audioIsPlaying = true;
         playAudio(audioFile, callback);
+        setTimeout(() => {
+            inputText.value = "";
+        }, 1500);
+
         return true;
     } catch (err) {
+        console.error(err);
         return false;
     }
 }
@@ -94,16 +109,7 @@ function setupInputText() {
         if (event.key === "Enter") {
             event.preventDefault();
             const value = event.target.value;
-            inputText.disabled = true;
-            askQuestion(value)
-                .then((success) => {
-                    if (success) {
-                        event.target.value = "";
-                    }
-                })
-                .catch((err) => {
-                    console.error(err);
-                });
+            askQuestion(value);
         }
     });
 }
@@ -179,18 +185,7 @@ function setupSpeechRecognition() {
 
             if (text == "") {
                 text = event.results[event.results.length - 1][0].transcript;
-                inputText.disabled = true;
-                askQuestion(text)
-                    .then((success) => {
-                        if (success) {
-                            setTimeout(() => {
-                                inputText.value = "";
-                            }, 1500);
-                        }
-                    })
-                    .catch((err) => {
-                        console.error(err);
-                    });
+                askQuestion(text);
             }
             inputText.value = text;
         });
@@ -247,19 +242,7 @@ function setupSuggestionsMenu() {
                 button.textContent = value["questions"][0];
 
                 button.onclick = () => {
-                    inputText.value = value["questions"][0];
-                    inputText.disabled = true;
-                    askQuestion(value["questions"][0])
-                        .then((success) => {
-                            if (success) {
-                                setTimeout(() => {
-                                    inputText.value = "";
-                                }, 1500);
-                            }
-                        })
-                        .catch((err) => {
-                            console.error(err);
-                        });
+                    askQuestion(value["questions"][0]);
                 };
 
                 const suggestionsMenu = document.getElementsByClassName("suggestions-menu-body");
@@ -269,16 +252,6 @@ function setupSuggestionsMenu() {
         .catch((err) => {
             console.error(err);
         });
-
-    // const myDiv = document.getElementById("myDiv");
-
-    // const myButton = document.createElement("button");
-    // myButton.textContent = "Click me!";
-    // myButton.onclick = () => {
-    // console.log("Button clicked!");
-    // };
-
-    // myDiv.appendChild(myButton);
 }
 
 // ----------------------------------------------------------------------------------
