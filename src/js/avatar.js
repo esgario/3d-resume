@@ -56,22 +56,21 @@ function addAvatar(scene) {
 
 function startBlinkingEyes() {
     const headMesh = model.getObjectByName("Wolf3D_Head");
-    if (headMesh) {
-        const leftEyeIndex = headMesh.morphTargetDictionary["eyeBlinkLeft"];
-        const rightEyeIndex = headMesh.morphTargetDictionary["eyeBlinkRight"];
-        if (leftEyeIndex !== undefined && rightEyeIndex !== undefined) {
-            const blinkValue = 1;
-            const normalValue = 0;
-            headMesh.morphTargetInfluences[leftEyeIndex] = blinkValue;
-            headMesh.morphTargetInfluences[rightEyeIndex] = blinkValue;
-            const blinkDuration = Math.random() * 100 + 100;
-            setTimeout(() => {
-                headMesh.morphTargetInfluences[leftEyeIndex] = normalValue;
-                headMesh.morphTargetInfluences[rightEyeIndex] = normalValue;
-                setTimeout(startBlinkingEyes, Math.random() * 4000 + 1000);
-            }, blinkDuration);
-        }
-    }
+    if (!headMesh) return;
+
+    const leftEyeIndex = headMesh.morphTargetDictionary["eyeBlinkLeft"];
+    const rightEyeIndex = headMesh.morphTargetDictionary["eyeBlinkRight"];
+    if (leftEyeIndex === undefined || rightEyeIndex === undefined) return;
+
+    headMesh.morphTargetInfluences[leftEyeIndex] = 1;
+    headMesh.morphTargetInfluences[rightEyeIndex] = 1;
+
+    const blinkDuration = Math.random() * 100 + 100;
+    setTimeout(() => {
+        headMesh.morphTargetInfluences[leftEyeIndex] = 0;
+        headMesh.morphTargetInfluences[rightEyeIndex] = 0;
+        setTimeout(startBlinkingEyes, Math.random() * 4000 + 1000);
+    }, blinkDuration);
 }
 
 /**
@@ -101,8 +100,9 @@ function playAudio(filename, callback) {
 function resetMouth() {
     const headMesh = model.getObjectByName("Wolf3D_Head");
     const teethMesh = model.getObjectByName("Wolf3D_Teeth");
-    headMesh.morphTargetInfluences = config.LIPSYNC_CORRESPONDENCE.default;
-    teethMesh.morphTargetInfluences = config.LIPSYNC_CORRESPONDENCE.default;
+    const defaultInfluences = config.LIPSYNC_CORRESPONDENCE.default;
+    headMesh.morphTargetInfluences = defaultInfluences.concat(headMesh.morphTargetInfluences.slice(-2));
+    teethMesh.morphTargetInfluences = defaultInfluences.concat(teethMesh.morphTargetInfluences.slice(-2));
 }
 
 function lookAtCamera(camera) {
