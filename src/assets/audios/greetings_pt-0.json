@@ -1,88 +1,83 @@
 {
     "metadata": {
         "soundFile": "../src/assets/audios/greetings_pt-0.json",
-        "duration": 2.32,
+        "duration": 2.27,
         "text": "Estou \u00f3timo, obrigado por perguntar."
     },
     "mouthCues": [
         {
             "start": 0.0,
-            "end": 0.09,
+            "end": 0.22,
             "value": "X"
         },
         {
-            "start": 0.09,
-            "end": 0.2,
+            "start": 0.22,
+            "end": 0.33,
             "value": "B"
         },
         {
-            "start": 0.2,
-            "end": 0.48,
+            "start": 0.33,
+            "end": 0.54,
+            "value": "E"
+        },
+        {
+            "start": 0.54,
+            "end": 0.96,
             "value": "F"
         },
         {
-            "start": 0.48,
-            "end": 0.55,
-            "value": "D"
-        },
-        {
-            "start": 0.55,
-            "end": 0.62,
-            "value": "B"
-        },
-        {
-            "start": 0.62,
-            "end": 0.7,
+            "start": 0.96,
+            "end": 1.04,
             "value": "A"
         },
         {
-            "start": 0.7,
-            "end": 0.78,
-            "value": "E"
-        },
-        {
-            "start": 0.78,
-            "end": 1.12,
-            "value": "C"
-        },
-        {
-            "start": 1.12,
-            "end": 1.46,
+            "start": 1.04,
+            "end": 1.11,
             "value": "B"
         },
         {
-            "start": 1.46,
-            "end": 1.57,
+            "start": 1.11,
+            "end": 1.24,
+            "value": "C"
+        },
+        {
+            "start": 1.24,
+            "end": 1.32,
             "value": "A"
         },
         {
-            "start": 1.57,
-            "end": 1.67,
+            "start": 1.32,
+            "end": 1.4,
             "value": "E"
         },
         {
-            "start": 1.67,
-            "end": 1.74,
+            "start": 1.4,
+            "end": 1.48,
+            "value": "A"
+        },
+        {
+            "start": 1.48,
+            "end": 1.59,
             "value": "C"
         },
         {
-            "start": 1.74,
-            "end": 1.81,
+            "start": 1.59,
+            "end": 1.73,
             "value": "B"
         },
         {
-            "start": 1.81,
-            "end": 1.95,
-            "value": "C"
+            "start": 1.73,
+            "end": 1.87,
+            "value": "F"
         },
         {
-            "start": 1.95,
-            "end": 2.09,
+            "start": 1.87,
+            "end": 2.08,
             "value": "B"
         },
         {
-            "start": 2.09,
-            "end": 2.32,
+            "start": 2.08,
+            "end": 2.27,
             "value": "X"
         }
     ]

@@ -1,7 +1,7 @@
 {
     "metadata": {
         "soundFile": "../src/assets/audios/unknown_pt-0.json",
-        "duration": 1.38,
+        "duration": 1.48,
         "text": "Desculpe, n\u00e3o entendi."
     },
     "mouthCues": [
@@ -12,32 +12,52 @@
         },
         {
             "start": 0.19,
-            "end": 0.39,
+            "end": 0.24,
+            "value": "B"
+        },
+        {
+            "start": 0.24,
+            "end": 0.29,
+            "value": "C"
+        },
+        {
+            "start": 0.29,
+            "end": 0.5,
             "value": "F"
         },
         {
-            "start": 0.39,
-            "end": 0.47,
-            "value": "A"
-        },
-        {
-            "start": 0.47,
-            "end": 0.61,
+            "start": 0.5,
+            "end": 0.64,
             "value": "B"
         },
         {
-            "start": 0.61,
-            "end": 0.68,
-            "value": "E"
+            "start": 0.64,
+            "end": 0.71,
+            "value": "C"
         },
         {
-            "start": 0.68,
-            "end": 1.17,
+            "start": 0.71,
+            "end": 0.78,
+            "value": "D"
+        },
+        {
+            "start": 0.78,
+            "end": 0.85,
             "value": "B"
         },
         {
-            "start": 1.17,
-            "end": 1.38,
+            "start": 0.85,
+            "end": 0.99,
+            "value": "C"
+        },
+        {
+            "start": 0.99,
+            "end": 1.2,
+            "value": "B"
+        },
+        {
+            "start": 1.2,
+            "end": 1.48,
             "value": "X"
         }
     ]

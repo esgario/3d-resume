@@ -29,6 +29,24 @@ def _download_rhubarb():
     subprocess.run(["unzip", RHUBARB_FILE + ".zip"], check=True)
 
 
+def _improve_mouth_pauses(data):
+    """Improve mouth pauses by splitting long pauses into smaller ones"""
+    max_movement_time = 0.5
+    new_mouth_cues = []
+    for cue in data["mouthCues"]:
+        new_cue = None
+        if (cue["end"] - cue["start"]) > max_movement_time:
+            new_cue_end = cue["end"]
+            cue["end"] = cue["start"] + max_movement_time
+            new_cue = {"start": cue["end"], "end": new_cue_end, "value": "X"}
+
+        new_mouth_cues.append(cue)
+        if new_cue is not None:
+            new_mouth_cues.append(new_cue)
+    data["mouthCues"] = new_mouth_cues
+    return data
+
+
 def _generate_lipsync():
     """Generate lipsync data using rhubarb"""
     for lang, key, answers, _ in get_texts():
@@ -36,9 +54,9 @@ def _generate_lipsync():
             audio_path = make_audio_path(lang, key, i, "ogg")
             json_path = make_audio_path(lang, key, i, "json")
 
-            if check_already_processed(json_path, text):
-                logger.info("%s already exists, skipping" % json_path)
-                continue
+            # if check_already_processed(json_path, text):
+            #     logger.info("%s already exists, skipping" % json_path)
+            #     continue
 
             rhubarb_command = [
                 f"{RHUBARB_FILE}/rhubarb",
@@ -62,6 +80,7 @@ def _generate_lipsync():
 
             with open(json_path, "r", encoding="utf-8") as file:
                 data = json.load(file)
+                data = _improve_mouth_pauses(data)
                 data["metadata"]["text"] = text
                 data["metadata"]["soundFile"] = json_path
 

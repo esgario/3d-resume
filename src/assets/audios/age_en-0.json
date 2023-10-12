@@ -7,11 +7,11 @@
     "mouthCues": [
         {
             "start": 0.0,
-            "end": 0.17,
+            "end": 0.18,
             "value": "X"
         },
         {
-            "start": 0.17,
+            "start": 0.18,
             "end": 0.25,
             "value": "C"
         },
@@ -27,31 +27,31 @@
         },
         {
             "start": 0.4,
-            "end": 0.47,
+            "end": 0.46,
             "value": "E"
         },
         {
-            "start": 0.47,
-            "end": 0.82,
+            "start": 0.46,
+            "end": 0.88,
             "value": "B"
         },
         {
-            "start": 0.82,
-            "end": 0.96,
+            "start": 0.88,
+            "end": 0.95,
             "value": "E"
         },
         {
-            "start": 0.96,
-            "end": 1.03,
+            "start": 0.95,
+            "end": 1.02,
             "value": "F"
         },
         {
-            "start": 1.03,
-            "end": 1.17,
+            "start": 1.02,
+            "end": 1.23,
             "value": "B"
         },
         {
-            "start": 1.17,
+            "start": 1.23,
             "end": 1.28,
             "value": "X"
         }

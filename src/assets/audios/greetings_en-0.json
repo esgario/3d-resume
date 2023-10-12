@@ -1,58 +1,78 @@
 {
     "metadata": {
         "soundFile": "../src/assets/audios/greetings_en-0.json",
-        "duration": 1.56,
+        "duration": 1.67,
         "text": "I'm great, thanks for asking."
     },
     "mouthCues": [
         {
             "start": 0.0,
-            "end": 0.14,
+            "end": 0.16,
             "value": "X"
         },
         {
-            "start": 0.14,
-            "end": 0.16,
+            "start": 0.16,
+            "end": 0.18,
             "value": "C"
         },
         {
-            "start": 0.16,
-            "end": 0.23,
+            "start": 0.18,
+            "end": 0.26,
             "value": "A"
         },
         {
-            "start": 0.23,
-            "end": 0.7,
+            "start": 0.26,
+            "end": 0.47,
             "value": "B"
         },
         {
-            "start": 0.7,
-            "end": 0.84,
+            "start": 0.47,
+            "end": 0.54,
             "value": "C"
         },
         {
-            "start": 0.84,
-            "end": 0.91,
+            "start": 0.54,
+            "end": 0.68,
             "value": "B"
         },
         {
-            "start": 0.91,
-            "end": 0.98,
+            "start": 0.68,
+            "end": 0.75,
+            "value": "C"
+        },
+        {
+            "start": 0.75,
+            "end": 0.89,
+            "value": "B"
+        },
+        {
+            "start": 0.89,
+            "end": 0.96,
+            "value": "C"
+        },
+        {
+            "start": 0.96,
+            "end": 1.03,
+            "value": "B"
+        },
+        {
+            "start": 1.03,
+            "end": 1.1,
             "value": "G"
         },
         {
-            "start": 0.98,
-            "end": 1.12,
+            "start": 1.1,
+            "end": 1.24,
             "value": "C"
         },
         {
-            "start": 1.12,
-            "end": 1.47,
+            "start": 1.24,
+            "end": 1.52,
             "value": "B"
         },
         {
-            "start": 1.47,
-            "end": 1.56,
+            "start": 1.52,
+            "end": 1.67,
             "value": "X"
         }
     ]

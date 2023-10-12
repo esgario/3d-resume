@@ -1,43 +1,48 @@
 {
     "metadata": {
         "soundFile": "../src/assets/audios/hello_en-0.json",
-        "duration": 1.14,
+        "duration": 1.01,
         "text": "Hello, how are you?"
     },
     "mouthCues": [
         {
             "start": 0.0,
-            "end": 0.15,
+            "end": 0.16,
             "value": "X"
         },
         {
-            "start": 0.15,
-            "end": 0.21,
+            "start": 0.16,
+            "end": 0.22,
             "value": "C"
         },
         {
-            "start": 0.21,
-            "end": 0.41,
+            "start": 0.22,
+            "end": 0.35,
             "value": "E"
         },
         {
-            "start": 0.41,
-            "end": 0.62,
-            "value": "C"
-        },
-        {
-            "start": 0.62,
-            "end": 0.69,
-            "value": "D"
-        },
-        {
-            "start": 0.69,
-            "end": 0.97,
+            "start": 0.35,
+            "end": 0.42,
             "value": "F"
         },
         {
-            "start": 0.97,
-            "end": 1.14,
+            "start": 0.42,
+            "end": 0.56,
+            "value": "C"
+        },
+        {
+            "start": 0.56,
+            "end": 0.7,
+            "value": "E"
+        },
+        {
+            "start": 0.7,
+            "end": 0.84,
+            "value": "F"
+        },
+        {
+            "start": 0.84,
+            "end": 1.01,
             "value": "X"
         }
     ]
