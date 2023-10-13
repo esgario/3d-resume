@@ -12,36 +12,41 @@
         },
         {
             "start": 0.19,
-            "end": 0.34,
+            "end": 0.28,
             "value": "E"
         },
         {
-            "start": 0.34,
-            "end": 0.41,
+            "start": 0.28,
+            "end": 0.35,
+            "value": "H"
+        },
+        {
+            "start": 0.35,
+            "end": 0.42,
             "value": "C"
         },
         {
-            "start": 0.41,
-            "end": 0.62,
+            "start": 0.42,
+            "end": 0.63,
             "value": "F"
         },
         {
-            "start": 0.62,
-            "end": 0.7,
+            "start": 0.63,
+            "end": 0.71,
             "value": "A"
         },
         {
-            "start": 0.7,
-            "end": 0.88,
+            "start": 0.71,
+            "end": 0.84,
             "value": "C"
         },
         {
-            "start": 0.88,
-            "end": 0.95,
+            "start": 0.84,
+            "end": 0.91,
             "value": "B"
         },
         {
-            "start": 0.95,
+            "start": 0.91,
             "end": 1.2,
             "value": "X"
         }

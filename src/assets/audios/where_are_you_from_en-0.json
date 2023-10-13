@@ -1,213 +1,203 @@
 {
     "metadata": {
         "soundFile": "../src/assets/audios/where_are_you_from_en-0.json",
-        "duration": 5.92,
+        "duration": 5.87,
         "text": "I'm from Vila Velha, Esp\u00edrito Santo. But currently, I live in Governador Valadares, Minas Gerais."
     },
     "mouthCues": [
         {
             "start": 0.0,
-            "end": 0.19,
+            "end": 0.08,
             "value": "X"
         },
         {
-            "start": 0.19,
-            "end": 0.24,
+            "start": 0.08,
+            "end": 0.14,
             "value": "C"
         },
         {
-            "start": 0.24,
-            "end": 0.29,
-            "value": "B"
-        },
-        {
-            "start": 0.29,
-            "end": 0.37,
+            "start": 0.14,
+            "end": 0.22,
             "value": "A"
         },
         {
-            "start": 0.37,
-            "end": 0.42,
+            "start": 0.22,
+            "end": 0.28,
             "value": "G"
+        },
+        {
+            "start": 0.28,
+            "end": 0.34,
+            "value": "B"
+        },
+        {
+            "start": 0.34,
+            "end": 0.42,
+            "value": "A"
         },
         {
             "start": 0.42,
-            "end": 0.47,
-            "value": "B"
-        },
-        {
-            "start": 0.47,
-            "end": 0.55,
-            "value": "A"
-        },
-        {
-            "start": 0.55,
-            "end": 0.75,
-            "value": "B"
-        },
-        {
-            "start": 0.75,
-            "end": 0.82,
+            "end": 0.48,
             "value": "G"
         },
         {
-            "start": 0.82,
-            "end": 0.89,
-            "value": "B"
-        },
-        {
-            "start": 0.89,
-            "end": 1.03,
-            "value": "C"
-        },
-        {
-            "start": 1.03,
-            "end": 1.1,
-            "value": "B"
-        },
-        {
-            "start": 1.1,
-            "end": 1.18,
-            "value": "A"
-        },
-        {
-            "start": 1.18,
-            "end": 1.56,
-            "value": "B"
-        },
-        {
-            "start": 1.56,
-            "end": 1.63,
-            "value": "C"
-        },
-        {
-            "start": 1.63,
-            "end": 1.71,
-            "value": "A"
-        },
-        {
-            "start": 1.71,
-            "end": 1.86,
-            "value": "B"
-        },
-        {
-            "start": 1.86,
-            "end": 2.34,
-            "value": "X"
-        },
-        {
-            "start": 2.34,
-            "end": 2.49,
-            "value": "A"
-        },
-        {
-            "start": 2.49,
-            "end": 2.55,
-            "value": "B"
-        },
-        {
-            "start": 2.55,
-            "end": 2.74,
-            "value": "E"
-        },
-        {
-            "start": 2.74,
-            "end": 3.12,
-            "value": "B"
-        },
-        {
-            "start": 3.12,
-            "end": 3.22,
-            "value": "D"
-        },
-        {
-            "start": 3.22,
-            "end": 3.43,
-            "value": "B"
-        },
-        {
-            "start": 3.43,
-            "end": 3.5,
-            "value": "G"
-        },
-        {
-            "start": 3.5,
-            "end": 3.64,
-            "value": "B"
-        },
-        {
-            "start": 3.64,
-            "end": 3.71,
-            "value": "G"
-        },
-        {
-            "start": 3.71,
-            "end": 3.78,
-            "value": "E"
-        },
-        {
-            "start": 3.78,
-            "end": 3.86,
-            "value": "A"
-        },
-        {
-            "start": 3.86,
-            "end": 3.92,
-            "value": "B"
-        },
-        {
-            "start": 3.92,
-            "end": 4.11,
-            "value": "E"
-        },
-        {
-            "start": 4.11,
-            "end": 4.18,
-            "value": "G"
-        },
-        {
-            "start": 4.18,
-            "end": 4.25,
-            "value": "H"
-        },
-        {
-            "start": 4.25,
-            "end": 4.33,
-            "value": "A"
-        },
-        {
-            "start": 4.33,
-            "end": 4.62,
-            "value": "C"
-        },
-        {
-            "start": 4.62,
-            "end": 5.02,
-            "value": "B"
-        },
-        {
-            "start": 5.02,
-            "end": 5.21,
-            "value": "C"
-        },
-        {
-            "start": 5.21,
-            "end": 5.35,
+            "start": 0.48,
+            "end": 0.61,
             "value": "F"
         },
         {
-            "start": 5.35,
-            "end": 5.43,
-            "value": "A"
+            "start": 0.61,
+            "end": 0.68,
+            "value": "C"
         },
         {
-            "start": 5.43,
-            "end": 5.76,
+            "start": 0.68,
+            "end": 0.75,
+            "value": "G"
+        },
+        {
+            "start": 0.75,
+            "end": 1.2,
             "value": "B"
         },
         {
-            "start": 5.76,
-            "end": 5.92,
+            "start": 1.2,
+            "end": 1.28,
+            "value": "A"
+        },
+        {
+            "start": 1.28,
+            "end": 1.72,
+            "value": "B"
+        },
+        {
+            "start": 1.72,
+            "end": 1.86,
+            "value": "C"
+        },
+        {
+            "start": 1.86,
+            "end": 2.2,
+            "value": "B"
+        },
+        {
+            "start": 2.2,
+            "end": 2.35,
+            "value": "A"
+        },
+        {
+            "start": 2.35,
+            "end": 2.42,
+            "value": "B"
+        },
+        {
+            "start": 2.42,
+            "end": 2.62,
+            "value": "E"
+        },
+        {
+            "start": 2.62,
+            "end": 2.69,
+            "value": "C"
+        },
+        {
+            "start": 2.69,
+            "end": 3.02,
+            "value": "B"
+        },
+        {
+            "start": 3.02,
+            "end": 3.09,
+            "value": "C"
+        },
+        {
+            "start": 3.09,
+            "end": 3.5,
+            "value": "B"
+        },
+        {
+            "start": 3.5,
+            "end": 3.57,
+            "value": "G"
+        },
+        {
+            "start": 3.57,
+            "end": 3.64,
+            "value": "E"
+        },
+        {
+            "start": 3.64,
+            "end": 3.72,
+            "value": "A"
+        },
+        {
+            "start": 3.72,
+            "end": 3.77,
+            "value": "B"
+        },
+        {
+            "start": 3.77,
+            "end": 4.03,
+            "value": "E"
+        },
+        {
+            "start": 4.03,
+            "end": 4.1,
+            "value": "C"
+        },
+        {
+            "start": 4.1,
+            "end": 4.18,
+            "value": "A"
+        },
+        {
+            "start": 4.18,
+            "end": 4.36,
+            "value": "C"
+        },
+        {
+            "start": 4.36,
+            "end": 4.74,
+            "value": "B"
+        },
+        {
+            "start": 4.74,
+            "end": 4.83,
+            "value": "A"
+        },
+        {
+            "start": 4.83,
+            "end": 4.89,
+            "value": "B"
+        },
+        {
+            "start": 4.89,
+            "end": 5.02,
+            "value": "C"
+        },
+        {
+            "start": 5.02,
+            "end": 5.16,
+            "value": "E"
+        },
+        {
+            "start": 5.16,
+            "end": 5.23,
+            "value": "B"
+        },
+        {
+            "start": 5.23,
+            "end": 5.3,
+            "value": "C"
+        },
+        {
+            "start": 5.3,
+            "end": 5.65,
+            "value": "B"
+        },
+        {
+            "start": 5.65,
+            "end": 5.87,
             "value": "X"
         }
     ]

@@ -25,9 +25,9 @@
             ],
             "questions": ["De onde você é?", "Onde você mora?"]
         },
-        "who_are_you": {
+        "what_is_your_name": {
             "answers": ["Meu nome é José Guilherme"],
-            "questions": ["Quem é você?", "Qual o seu nome?"]
+            "questions": ["Qual o seu nome?"]
         },
         "what_are_you": {
             "answers": ["Eu sou um avatar 3d capaz de responder perguntas sobre o meu currículo."],
@@ -35,9 +35,9 @@
         },
         "tell_me_about_yourself": {
             "answers": [
-                "Meu nome é José Guilherme, sou formado em Engenharia de Computação e tenho mestrado em Informática. Minha trajetória profissional começou como programador de sistemas embarcados, onde desenvolvi sólidas habilidades em programação e resolução de problemas.\n Em 2017, quando ingressei no mestrado, pude aprofundar meus conhecimentos em inteligência artificial e machine learning. Durante esse período, mergulhei profundamente em projetos de pesquisa e desenvolvimento de modelos de aprendizado de máquina, especialmente voltados a visão computacional.\n Desde 2019, venho trabalhando diretamente com machine learning, aplicando meu conhecimento para resolver problemas complexos e na construção de novas soluções. Tenho grande paixão pela área e estou sempre buscando oportunidades para aplicar meu conhecimento de forma criativa e inovadora."
+                "Meu nome é José Guilherme, sou formado em engenharia de computação e tenho mestrado em informática. Minha trajetória profissional começou como programador de sistemas embarcados, onde desenvolvi sólidas habilidades em programação e resolução de problemas.\n Em 2017, quando ingressei no mestrado, pude aprofundar meus conhecimentos em inteligência artificial e machine learning. Durante esse período, mergulhei profundamente em projetos de pesquisa e desenvolvimento de modelos de aprendizado de máquina, especialmente voltados a visão computacional.\n Desde 2019, venho trabalhando diretamente com machine learning, aplicando meu conhecimento para resolver problemas complexos e na construção de novas soluções. Tenho grande paixão pela área e estou sempre buscando oportunidades para aplicar meu conhecimento de forma criativa e inovadora."
             ],
-            "questions": ["Me fale sobre você", "Fale sobre você", "Me conte um pouco sobre você"]
+            "questions": ["Me fale sobre você", "Fale sobre você", "Quem é você?", "Me conte um pouco sobre você"]
         },
         "strengths": {
             "answers": [
@@ -89,9 +89,9 @@
             ],
             "questions": ["Where are you from?", "Where do you live?"]
         },
-        "who_are_you": {
+        "what_is_your_name": {
             "answers": ["My name is José Guilherme"],
-            "questions": ["Who are you?", "What's your name?"]
+            "questions": ["What's your name?"]
         },
         "what_are_you": {
             "answers": ["I'm a 3d avatar capable of answering questions about my resume."],

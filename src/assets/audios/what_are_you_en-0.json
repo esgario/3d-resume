@@ -1,168 +1,168 @@
 {
     "metadata": {
         "soundFile": "../src/assets/audios/what_are_you_en-0.json",
-        "duration": 3.7,
+        "duration": 3.89,
         "text": "I'm a 3d avatar capable of answering questions about my resume."
     },
     "mouthCues": [
         {
             "start": 0.0,
-            "end": 0.15,
+            "end": 0.1,
             "value": "X"
         },
         {
-            "start": 0.15,
-            "end": 0.2,
-            "value": "C"
-        },
-        {
-            "start": 0.2,
-            "end": 0.28,
-            "value": "A"
-        },
-        {
-            "start": 0.28,
-            "end": 0.34,
-            "value": "C"
-        },
-        {
-            "start": 0.34,
-            "end": 0.68,
-            "value": "B"
-        },
-        {
-            "start": 0.68,
-            "end": 0.82,
-            "value": "C"
-        },
-        {
-            "start": 0.82,
-            "end": 0.89,
-            "value": "G"
-        },
-        {
-            "start": 0.89,
-            "end": 0.96,
-            "value": "B"
-        },
-        {
-            "start": 0.96,
-            "end": 1.24,
+            "start": 0.1,
+            "end": 0.18,
             "value": "D"
         },
         {
-            "start": 1.24,
-            "end": 1.38,
+            "start": 0.18,
+            "end": 0.6799999999999999,
+            "value": "B"
+        },
+        {
+            "start": 0.6799999999999999,
+            "end": 0.81,
+            "value": "X"
+        },
+        {
+            "start": 0.81,
+            "end": 0.95,
             "value": "C"
         },
         {
-            "start": 1.38,
-            "end": 1.4,
-            "value": "A"
-        },
-        {
-            "start": 1.4,
-            "end": 1.47,
-            "value": "B"
-        },
-        {
-            "start": 1.47,
-            "end": 1.57,
-            "value": "A"
-        },
-        {
-            "start": 1.57,
-            "end": 1.74,
-            "value": "B"
-        },
-        {
-            "start": 1.74,
-            "end": 1.81,
+            "start": 0.95,
+            "end": 1.02,
             "value": "G"
         },
         {
-            "start": 1.81,
-            "end": 1.95,
-            "value": "C"
-        },
-        {
-            "start": 1.95,
-            "end": 2.3,
+            "start": 1.02,
+            "end": 1.09,
             "value": "B"
         },
         {
-            "start": 2.3,
-            "end": 2.37,
+            "start": 1.09,
+            "end": 1.23,
+            "value": "D"
+        },
+        {
+            "start": 1.23,
+            "end": 1.48,
+            "value": "C"
+        },
+        {
+            "start": 1.48,
+            "end": 1.5,
+            "value": "A"
+        },
+        {
+            "start": 1.5,
+            "end": 1.56,
+            "value": "B"
+        },
+        {
+            "start": 1.56,
+            "end": 1.61,
+            "value": "A"
+        },
+        {
+            "start": 1.61,
+            "end": 1.71,
+            "value": "C"
+        },
+        {
+            "start": 1.71,
+            "end": 1.78,
+            "value": "H"
+        },
+        {
+            "start": 1.78,
+            "end": 1.85,
+            "value": "B"
+        },
+        {
+            "start": 1.85,
+            "end": 1.92,
+            "value": "G"
+        },
+        {
+            "start": 1.92,
+            "end": 2.06,
+            "value": "C"
+        },
+        {
+            "start": 2.06,
+            "end": 2.41,
+            "value": "B"
+        },
+        {
+            "start": 2.41,
+            "end": 2.48,
             "value": "F"
         },
         {
-            "start": 2.37,
-            "end": 2.44,
-            "value": "C"
-        },
-        {
-            "start": 2.44,
-            "end": 2.65,
+            "start": 2.48,
+            "end": 2.76,
             "value": "B"
         },
         {
-            "start": 2.65,
-            "end": 2.73,
+            "start": 2.76,
+            "end": 2.84,
             "value": "A"
         },
         {
-            "start": 2.73,
-            "end": 2.8,
+            "start": 2.84,
+            "end": 2.9,
             "value": "C"
         },
         {
-            "start": 2.8,
-            "end": 2.87,
+            "start": 2.9,
+            "end": 3.02,
             "value": "B"
         },
         {
-            "start": 2.87,
-            "end": 2.95,
+            "start": 3.02,
+            "end": 3.1,
             "value": "A"
         },
         {
-            "start": 2.95,
-            "end": 3.01,
+            "start": 3.1,
+            "end": 3.15,
             "value": "C"
         },
         {
-            "start": 3.01,
-            "end": 3.07,
+            "start": 3.15,
+            "end": 3.27,
             "value": "B"
         },
         {
-            "start": 3.07,
-            "end": 3.14,
+            "start": 3.27,
+            "end": 3.34,
             "value": "C"
         },
         {
-            "start": 3.14,
-            "end": 3.28,
+            "start": 3.34,
+            "end": 3.41,
             "value": "B"
         },
         {
-            "start": 3.28,
-            "end": 3.36,
+            "start": 3.41,
+            "end": 3.49,
             "value": "A"
         },
         {
-            "start": 3.36,
-            "end": 3.45,
+            "start": 3.49,
+            "end": 3.54,
             "value": "C"
         },
         {
-            "start": 3.45,
-            "end": 3.52,
+            "start": 3.54,
+            "end": 3.59,
             "value": "B"
         },
         {
-            "start": 3.52,
-            "end": 3.7,
+            "start": 3.59,
+            "end": 3.89,
             "value": "X"
         }
     ]

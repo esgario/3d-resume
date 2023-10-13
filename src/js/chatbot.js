@@ -192,6 +192,7 @@ function setupSpeechRecognition() {
         });
 
         recognition.addEventListener("start", () => {
+            console.log("Speech recognition started", recognition);
             const speechIcon = document.getElementById("speechIcon");
             speechIcon.classList.remove("bi-mic");
             speechIcon.classList.add("bi-mic-fill");
@@ -208,9 +209,12 @@ function setupSpeechRecognition() {
         // setup speechButton
         const speechButton = document.getElementById("speechButton");
         speechButton.onclick = () => {
+            console.log("speechButton clicked");
             if (recognitionState == "active") {
+                console.log("speechButton stop", recognition);
                 recognition.stop();
             } else {
+                console.log("speechButton start", recognition);
                 recognition.start();
             }
         };

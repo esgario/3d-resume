@@ -1,48 +1,43 @@
 {
     "metadata": {
         "soundFile": "../src/assets/audios/age_pt-0.json",
-        "duration": 1.56,
+        "duration": 1.43,
         "text": "Eu tenho 30 anos."
     },
     "mouthCues": [
         {
             "start": 0.0,
-            "end": 0.09,
+            "end": 0.12,
             "value": "X"
         },
         {
-            "start": 0.09,
-            "end": 0.18,
-            "value": "A"
-        },
-        {
-            "start": 0.18,
-            "end": 0.66,
+            "start": 0.12,
+            "end": 0.59,
             "value": "B"
         },
         {
-            "start": 0.66,
-            "end": 0.74,
+            "start": 0.59,
+            "end": 0.67,
             "value": "A"
         },
         {
-            "start": 0.74,
-            "end": 0.91,
+            "start": 0.67,
+            "end": 0.82,
             "value": "C"
         },
         {
-            "start": 0.91,
-            "end": 0.98,
+            "start": 0.82,
+            "end": 0.89,
             "value": "E"
         },
         {
-            "start": 0.98,
-            "end": 1.33,
+            "start": 0.89,
+            "end": 1.17,
             "value": "B"
         },
         {
-            "start": 1.33,
-            "end": 1.56,
+            "start": 1.17,
+            "end": 1.43,
             "value": "X"
         }
     ]
