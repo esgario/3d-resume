@@ -1,0 +1,184 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/programming_languages_en-0.json",
+        "duration": 5.25,
+        "text": "I am currently working with Python, but I have some experience with JavaScript and C++."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.16,
+            "value": "X"
+        },
+        {
+            "start": 0.16,
+            "end": 0.27,
+            "value": "C"
+        },
+        {
+            "start": 0.27,
+            "end": 0.35,
+            "value": "A"
+        },
+        {
+            "start": 0.35,
+            "end": 0.56,
+            "value": "E"
+        },
+        {
+            "start": 0.56,
+            "end": 0.77,
+            "value": "B"
+        },
+        {
+            "start": 0.77,
+            "end": 0.84,
+            "value": "F"
+        },
+        {
+            "start": 0.84,
+            "end": 1.12,
+            "value": "B"
+        },
+        {
+            "start": 1.12,
+            "end": 1.2,
+            "value": "A"
+        },
+        {
+            "start": 1.2,
+            "end": 1.37,
+            "value": "C"
+        },
+        {
+            "start": 1.37,
+            "end": 1.51,
+            "value": "B"
+        },
+        {
+            "start": 1.51,
+            "end": 1.65,
+            "value": "D"
+        },
+        {
+            "start": 1.65,
+            "end": 1.72,
+            "value": "C"
+        },
+        {
+            "start": 1.72,
+            "end": 2.04,
+            "value": "B"
+        },
+        {
+            "start": 2.04,
+            "end": 2.18,
+            "value": "A"
+        },
+        {
+            "start": 2.18,
+            "end": 2.22,
+            "value": "B"
+        },
+        {
+            "start": 2.22,
+            "end": 2.47,
+            "value": "C"
+        },
+        {
+            "start": 2.47,
+            "end": 2.61,
+            "value": "B"
+        },
+        {
+            "start": 2.61,
+            "end": 2.67,
+            "value": "A"
+        },
+        {
+            "start": 2.67,
+            "end": 2.73,
+            "value": "B"
+        },
+        {
+            "start": 2.73,
+            "end": 2.81,
+            "value": "A"
+        },
+        {
+            "start": 2.81,
+            "end": 3.19,
+            "value": "B"
+        },
+        {
+            "start": 3.19,
+            "end": 3.26,
+            "value": "F"
+        },
+        {
+            "start": 3.26,
+            "end": 3.4,
+            "value": "B"
+        },
+        {
+            "start": 3.4,
+            "end": 3.54,
+            "value": "D"
+        },
+        {
+            "start": 3.54,
+            "end": 3.75,
+            "value": "B"
+        },
+        {
+            "start": 3.75,
+            "end": 3.83,
+            "value": "A"
+        },
+        {
+            "start": 3.83,
+            "end": 4.16,
+            "value": "B"
+        },
+        {
+            "start": 4.16,
+            "end": 4.24,
+            "value": "A"
+        },
+        {
+            "start": 4.24,
+            "end": 4.33,
+            "value": "H"
+        },
+        {
+            "start": 4.33,
+            "end": 4.4,
+            "value": "C"
+        },
+        {
+            "start": 4.4,
+            "end": 4.48,
+            "value": "A"
+        },
+        {
+            "start": 4.48,
+            "end": 4.68,
+            "value": "H"
+        },
+        {
+            "start": 4.68,
+            "end": 4.75,
+            "value": "C"
+        },
+        {
+            "start": 4.75,
+            "end": 4.96,
+            "value": "B"
+        },
+        {
+            "start": 4.96,
+            "end": 5.25,
+            "value": "X"
+        }
+    ]
+}

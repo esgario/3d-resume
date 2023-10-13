@@ -1,0 +1,214 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/programming_languages_pt-0.json",
+        "duration": 5.32,
+        "text": "Atualmente eu trabalho com Python, mas tenho alguma experi\u00eancia com JavaScript e C++."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.09,
+            "value": "X"
+        },
+        {
+            "start": 0.09,
+            "end": 0.17,
+            "value": "C"
+        },
+        {
+            "start": 0.17,
+            "end": 0.24,
+            "value": "A"
+        },
+        {
+            "start": 0.24,
+            "end": 0.39,
+            "value": "C"
+        },
+        {
+            "start": 0.39,
+            "end": 0.46,
+            "value": "H"
+        },
+        {
+            "start": 0.46,
+            "end": 0.54,
+            "value": "A"
+        },
+        {
+            "start": 0.54,
+            "end": 0.61,
+            "value": "B"
+        },
+        {
+            "start": 0.61,
+            "end": 0.75,
+            "value": "F"
+        },
+        {
+            "start": 0.75,
+            "end": 0.89,
+            "value": "C"
+        },
+        {
+            "start": 0.89,
+            "end": 0.97,
+            "value": "A"
+        },
+        {
+            "start": 0.97,
+            "end": 1.04,
+            "value": "C"
+        },
+        {
+            "start": 1.04,
+            "end": 1.11,
+            "value": "B"
+        },
+        {
+            "start": 1.11,
+            "end": 1.25,
+            "value": "C"
+        },
+        {
+            "start": 1.25,
+            "end": 1.33,
+            "value": "A"
+        },
+        {
+            "start": 1.33,
+            "end": 1.49,
+            "value": "C"
+        },
+        {
+            "start": 1.49,
+            "end": 1.63,
+            "value": "B"
+        },
+        {
+            "start": 1.63,
+            "end": 1.71,
+            "value": "A"
+        },
+        {
+            "start": 1.71,
+            "end": 2.08,
+            "value": "X"
+        },
+        {
+            "start": 2.08,
+            "end": 2.12,
+            "value": "B"
+        },
+        {
+            "start": 2.12,
+            "end": 2.16,
+            "value": "C"
+        },
+        {
+            "start": 2.16,
+            "end": 2.37,
+            "value": "B"
+        },
+        {
+            "start": 2.37,
+            "end": 2.58,
+            "value": "E"
+        },
+        {
+            "start": 2.58,
+            "end": 2.72,
+            "value": "F"
+        },
+        {
+            "start": 2.72,
+            "end": 2.79,
+            "value": "B"
+        },
+        {
+            "start": 2.79,
+            "end": 2.87,
+            "value": "A"
+        },
+        {
+            "start": 2.87,
+            "end": 3.21,
+            "value": "B"
+        },
+        {
+            "start": 3.21,
+            "end": 3.35,
+            "value": "E"
+        },
+        {
+            "start": 3.35,
+            "end": 3.42,
+            "value": "C"
+        },
+        {
+            "start": 3.42,
+            "end": 3.56,
+            "value": "B"
+        },
+        {
+            "start": 3.56,
+            "end": 3.63,
+            "value": "G"
+        },
+        {
+            "start": 3.63,
+            "end": 3.91,
+            "value": "B"
+        },
+        {
+            "start": 3.91,
+            "end": 3.99,
+            "value": "A"
+        },
+        {
+            "start": 3.99,
+            "end": 4.16,
+            "value": "B"
+        },
+        {
+            "start": 4.16,
+            "end": 4.28,
+            "value": "X"
+        },
+        {
+            "start": 4.28,
+            "end": 4.55,
+            "value": "B"
+        },
+        {
+            "start": 4.55,
+            "end": 4.62,
+            "value": "F"
+        },
+        {
+            "start": 4.62,
+            "end": 4.69,
+            "value": "C"
+        },
+        {
+            "start": 4.69,
+            "end": 4.77,
+            "value": "A"
+        },
+        {
+            "start": 4.77,
+            "end": 4.94,
+            "value": "C"
+        },
+        {
+            "start": 4.94,
+            "end": 5.15,
+            "value": "B"
+        },
+        {
+            "start": 5.15,
+            "end": 5.32,
+            "value": "X"
+        }
+    ]
+}

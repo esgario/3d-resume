@@ -51,6 +51,20 @@
             ],
             "questions": ["Quais são seus pontos fracos?", "Quais são seus pontos negativos?"]
         },
+        "why_should_i_hire_you": {
+            "answers": [
+                "Porque eu sou um profissional adaptável, capaz de atender às particularidades de cada projeto. Tenho um histórico de entregas rápidas e de alta qualidade."
+            ],
+            "questions": ["Por que eu deveria te contratar?"]
+        },
+        "programming_languages": {
+            "answers": ["Atualmente eu trabalho com Python, mas tenho alguma experiência com JavaScript e C++."],
+            "questions": [
+                "Quais linguagens de programação você conhece?",
+                "Quais linguagens de programação você domina?"
+            ],
+            "enable_suggestion": false
+        },
         "unknown": {
             "answers": ["Desculpe, não entendi."],
             "questions": null
@@ -100,6 +114,17 @@
                 "One of my weaknesses is anxiety, which sometimes makes me impatient for immediate results. However, I am aware of these aspects and have worked to improve my emotional balance and ability to handle pressure more calmly."
             ],
             "questions": ["What are your weaknesses?"]
+        },
+        "why_should_i_hire_you": {
+            "answers": [
+                "Because I am an adaptable professional, capable of addressing the specific requirements of each project. I have a proven track record of fast and high-quality deliveries."
+            ],
+            "questions": ["Why should I hire you?"]
+        },
+        "programming_languages": {
+            "answers": ["I am currently working with Python, but I have some experience with JavaScript and C++."],
+            "questions": ["What programming languages do you know?"],
+            "enable_suggestion": false
         },
         "unknown": {
             "answers": ["Sorry, I didn't understand."],

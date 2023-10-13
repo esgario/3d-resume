@@ -246,7 +246,7 @@ function updateSuggestionsMenu() {
             }
 
             for (const [key, value] of Object.entries(data[getCurrentLanguage()])) {
-                if (value["questions"] == null) {
+                if (value["questions"] == null || value["enable_suggestion"] == false) {
                     continue;
                 }
                 const button = document.createElement("button");

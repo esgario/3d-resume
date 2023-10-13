@@ -54,9 +54,9 @@ def _generate_lipsync():
             audio_path = make_audio_path(lang, key, i, "ogg")
             json_path = make_audio_path(lang, key, i, "json")
 
-            # if check_already_processed(json_path, text):
-            #     logger.info("%s already exists, skipping" % json_path)
-            #     continue
+            if check_already_processed(json_path, text):
+                logger.info("%s already exists, skipping" % json_path)
+                continue
 
             rhubarb_command = [
                 f"{RHUBARB_FILE}/rhubarb",
