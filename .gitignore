@@ -135,3 +135,6 @@ Rhubarb*
 # Python
 *.pyc
 __pycache__/
+
+
+*.ipynb
