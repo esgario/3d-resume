@@ -75,13 +75,15 @@ async function askQuestion(question) {
 
         const lastRecogState = recognitionState;
         let callback = () => {
-            if (lastRecogState == "active") {
+            if (lastRecogState == "active" && recognition) {
                 recognition.start();
             }
             inputText.disabled = false;
             audioIsPlaying = false;
         };
-        recognition.stop();
+        if (recognition) {
+            recognition.stop();
+        }
         audioIsPlaying = true;
         playAudio(audioFile, callback);
         setTimeout(() => {
