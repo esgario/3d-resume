@@ -1,4 +1,35 @@
+﻿<div align="center">
+    <image src='./src/assets/images/thumbnail.png'>
+</div>
+
+## Installation
+
+This project is split into two parts:
+- The web app, which is a JavaScript application.
+- The assets generator, which is a Python application.
+
+### JavaScript dependencies
+
+Run the following command to install the dependencies:
+
+```
+npm install
+```
+
+### Python dependencies
+
+Before installing the dependencies, make sure you have python installed and that you have created a virtual environment.
+
+Run the following command to install the dependencies:
+
+```
+pip install -r assets_generator/requirements.txt
+```
+
+
 ## Development
+
+### Web APP
 
 Run the following command to start the development server:
 
@@ -16,6 +47,20 @@ Formatting the code:
 
 ```
 npx prettier . --write
+```
+
+### Assets Generator
+
+Before generating the assets, create a `.env` file in the `assets_generator` folder with the following content:
+
+```
+ELEVEN_LABS_API_KEY=<your_api_key>
+```
+
+To generate the assets run the following command:
+
+```
+python assets_generator/main.py
 ```
 
 ## Generating Avatar
