@@ -2,7 +2,8 @@
     "pt": {
         "hello": {
             "answers": ["Olá, tudo bem?"],
-            "questions": ["Olá", "Oi", "Olá, boa noite", "Olá, boa tarde", "Olá, bom dia", "E aí"]
+            "questions": ["Olá", "Oi", "Olá, boa noite", "Olá, boa tarde", "Olá, bom dia", "E aí"],
+            "enable_suggestion": false
         },
         "greetings": {
             "answers": ["Estou ótimo, obrigado por perguntar."],
@@ -16,7 +17,7 @@
             ]
         },
         "age": {
-            "answers": ["Eu tenho 30 anos."],
+            "answers": ["Eu tenho 31 anos."],
             "questions": ["Quantos anos você tem?", "Qual a sua idade?"]
         },
         "where_are_you_from": {
@@ -65,6 +66,11 @@
             ],
             "enable_suggestion": false
         },
+        "tell_me_a_joke": {
+            "answers": ["Por que enviar SPAM é algo justificável? Porque os fins justificam os emails"],
+            "questions": ["Me conte uma piada", "Conta uma piada"],
+            "enable_suggestion": false
+        },
         "unknown": {
             "answers": ["Desculpe, não entendi."],
             "questions": null
@@ -73,14 +79,15 @@
     "en": {
         "hello": {
             "answers": ["Hello, how are you?"],
-            "questions": ["Hello", "Hi", "What's up"]
+            "questions": ["Hello", "Hi", "What's up"],
+            "enable_suggestion": false
         },
         "greetings": {
             "answers": ["I'm great, thanks for asking."],
             "questions": ["Hello, how are you?", "Are you okay?", "How are you doing?"]
         },
         "age": {
-            "answers": ["I'm 30 years old."],
+            "answers": ["I'm 31 years old."],
             "questions": ["How old are you?"]
         },
         "where_are_you_from": {
@@ -124,6 +131,11 @@
         "programming_languages": {
             "answers": ["I am currently working with Python, but I have some experience with JavaScript and C++."],
             "questions": ["What programming languages do you know?"],
+            "enable_suggestion": false
+        },
+        "tell_me_a_joke": {
+            "answers": ["Why do submarines all run Linux? Because they can't open Windows underwater."],
+            "questions": ["Tell me a joke"],
             "enable_suggestion": false
         },
         "unknown": {

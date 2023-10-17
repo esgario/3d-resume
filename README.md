@@ -5,12 +5,12 @@
     </a>
 </div>
 
-
 ## Installation
 
 This project is split into two parts:
-- The web app, which is a JavaScript application.
-- The assets generator, which is a Python application.
+
+-   The web app, which is a JavaScript application.
+-   The assets generator, which is a Python application.
 
 ### JavaScript dependencies
 
@@ -29,7 +29,6 @@ Run the following command to install the dependencies:
 ```
 pip install -r assets_generator/requirements.txt
 ```
-
 
 ## Development
 

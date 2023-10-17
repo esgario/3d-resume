@@ -1,0 +1,154 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/tell_me_a_joke_pt-0.json",
+        "duration": 4.49,
+        "text": "Por que enviar SPAM \u00e9 algo justific\u00e1vel? Porque os fins justificam os emails"
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.19,
+            "value": "X"
+        },
+        {
+            "start": 0.19,
+            "end": 0.42,
+            "value": "B"
+        },
+        {
+            "start": 0.42,
+            "end": 0.55,
+            "value": "A"
+        },
+        {
+            "start": 0.55,
+            "end": 0.61,
+            "value": "C"
+        },
+        {
+            "start": 0.61,
+            "end": 0.67,
+            "value": "D"
+        },
+        {
+            "start": 0.67,
+            "end": 0.81,
+            "value": "B"
+        },
+        {
+            "start": 0.81,
+            "end": 0.89,
+            "value": "A"
+        },
+        {
+            "start": 0.89,
+            "end": 1.04,
+            "value": "B"
+        },
+        {
+            "start": 1.04,
+            "end": 1.11,
+            "value": "E"
+        },
+        {
+            "start": 1.11,
+            "end": 1.25,
+            "value": "F"
+        },
+        {
+            "start": 1.25,
+            "end": 1.32,
+            "value": "C"
+        },
+        {
+            "start": 1.32,
+            "end": 1.46,
+            "value": "E"
+        },
+        {
+            "start": 1.46,
+            "end": 1.6,
+            "value": "F"
+        },
+        {
+            "start": 1.6,
+            "end": 1.81,
+            "value": "B"
+        },
+        {
+            "start": 1.81,
+            "end": 1.88,
+            "value": "C"
+        },
+        {
+            "start": 1.88,
+            "end": 2.09,
+            "value": "D"
+        },
+        {
+            "start": 2.09,
+            "end": 2.3,
+            "value": "E"
+        },
+        {
+            "start": 2.3,
+            "end": 2.44,
+            "value": "F"
+        },
+        {
+            "start": 2.44,
+            "end": 2.91,
+            "value": "B"
+        },
+        {
+            "start": 2.91,
+            "end": 2.98,
+            "value": "C"
+        },
+        {
+            "start": 2.98,
+            "end": 3.26,
+            "value": "B"
+        },
+        {
+            "start": 3.26,
+            "end": 3.33,
+            "value": "G"
+        },
+        {
+            "start": 3.33,
+            "end": 3.4,
+            "value": "F"
+        },
+        {
+            "start": 3.4,
+            "end": 3.54,
+            "value": "E"
+        },
+        {
+            "start": 3.54,
+            "end": 3.75,
+            "value": "B"
+        },
+        {
+            "start": 3.75,
+            "end": 3.85,
+            "value": "A"
+        },
+        {
+            "start": 3.85,
+            "end": 3.92,
+            "value": "C"
+        },
+        {
+            "start": 3.92,
+            "end": 4.26,
+            "value": "B"
+        },
+        {
+            "start": 4.26,
+            "end": 4.49,
+            "value": "X"
+        }
+    ]
+}

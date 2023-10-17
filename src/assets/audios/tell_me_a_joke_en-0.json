@@ -1,0 +1,154 @@
+{
+    "metadata": {
+        "soundFile": "../src/assets/audios/tell_me_a_joke_en-0.json",
+        "duration": 4.31,
+        "text": "Why do submarines all run Linux? Because they can't open Windows underwater."
+    },
+    "mouthCues": [
+        {
+            "start": 0.0,
+            "end": 0.09,
+            "value": "X"
+        },
+        {
+            "start": 0.09,
+            "end": 0.45,
+            "value": "F"
+        },
+        {
+            "start": 0.45,
+            "end": 0.52,
+            "value": "B"
+        },
+        {
+            "start": 0.52,
+            "end": 0.62,
+            "value": "A"
+        },
+        {
+            "start": 0.62,
+            "end": 0.72,
+            "value": "E"
+        },
+        {
+            "start": 0.72,
+            "end": 0.93,
+            "value": "B"
+        },
+        {
+            "start": 0.93,
+            "end": 1.14,
+            "value": "E"
+        },
+        {
+            "start": 1.14,
+            "end": 1.49,
+            "value": "B"
+        },
+        {
+            "start": 1.49,
+            "end": 1.63,
+            "value": "C"
+        },
+        {
+            "start": 1.63,
+            "end": 1.96,
+            "value": "B"
+        },
+        {
+            "start": 1.96,
+            "end": 2.08,
+            "value": "A"
+        },
+        {
+            "start": 2.08,
+            "end": 2.23,
+            "value": "C"
+        },
+        {
+            "start": 2.23,
+            "end": 2.37,
+            "value": "B"
+        },
+        {
+            "start": 2.37,
+            "end": 2.58,
+            "value": "C"
+        },
+        {
+            "start": 2.58,
+            "end": 2.65,
+            "value": "B"
+        },
+        {
+            "start": 2.65,
+            "end": 2.72,
+            "value": "E"
+        },
+        {
+            "start": 2.72,
+            "end": 2.84,
+            "value": "A"
+        },
+        {
+            "start": 2.84,
+            "end": 2.95,
+            "value": "B"
+        },
+        {
+            "start": 2.95,
+            "end": 3.02,
+            "value": "F"
+        },
+        {
+            "start": 3.02,
+            "end": 3.16,
+            "value": "B"
+        },
+        {
+            "start": 3.16,
+            "end": 3.23,
+            "value": "E"
+        },
+        {
+            "start": 3.23,
+            "end": 3.47,
+            "value": "F"
+        },
+        {
+            "start": 3.47,
+            "end": 3.6,
+            "value": "B"
+        },
+        {
+            "start": 3.6,
+            "end": 3.67,
+            "value": "E"
+        },
+        {
+            "start": 3.67,
+            "end": 3.74,
+            "value": "F"
+        },
+        {
+            "start": 3.74,
+            "end": 3.81,
+            "value": "E"
+        },
+        {
+            "start": 3.81,
+            "end": 3.88,
+            "value": "B"
+        },
+        {
+            "start": 3.88,
+            "end": 4.02,
+            "value": "E"
+        },
+        {
+            "start": 4.02,
+            "end": 4.31,
+            "value": "X"
+        }
+    ]
+}

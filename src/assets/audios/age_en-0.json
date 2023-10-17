@@ -1,53 +1,68 @@
 {
     "metadata": {
         "soundFile": "../src/assets/audios/age_en-0.json",
-        "duration": 1.38,
-        "text": "I'm 30 years old."
+        "duration": 1.48,
+        "text": "I'm 31 years old."
     },
     "mouthCues": [
         {
             "start": 0.0,
-            "end": 0.18,
+            "end": 0.16,
             "value": "X"
         },
         {
-            "start": 0.18,
-            "end": 0.23,
+            "start": 0.16,
+            "end": 0.22,
             "value": "C"
         },
         {
-            "start": 0.23,
-            "end": 0.31,
-            "value": "A"
-        },
-        {
-            "start": 0.31,
-            "end": 0.65,
+            "start": 0.22,
+            "end": 0.42,
             "value": "B"
         },
         {
-            "start": 0.65,
-            "end": 0.72,
-            "value": "C"
-        },
-        {
-            "start": 0.72,
-            "end": 0.79,
+            "start": 0.42,
+            "end": 0.49,
             "value": "E"
         },
         {
-            "start": 0.79,
-            "end": 1.29,
+            "start": 0.49,
+            "end": 0.63,
             "value": "B"
         },
         {
-            "start": 1.29,
-            "end": 1.35,
-            "value": "X"
+            "start": 0.63,
+            "end": 0.7,
+            "value": "F"
         },
         {
-            "start": 1.35,
-            "end": 1.38,
+            "start": 0.7,
+            "end": 0.84,
+            "value": "C"
+        },
+        {
+            "start": 0.84,
+            "end": 0.91,
+            "value": "E"
+        },
+        {
+            "start": 0.91,
+            "end": 0.98,
+            "value": "B"
+        },
+        {
+            "start": 0.98,
+            "end": 1.05,
+            "value": "E"
+        },
+        {
+            "start": 1.05,
+            "end": 1.33,
+            "value": "B"
+        },
+        {
+            "start": 1.33,
+            "end": 1.48,
             "value": "X"
         }
     ]
