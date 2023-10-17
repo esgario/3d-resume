@@ -1,6 +1,10 @@
 ﻿<div align="center">
     <image src='./src/assets/images/thumbnail.png'>
+    <a href="https://esgario.github.io/3d-resume/">
+        <p>Click here to access the 3D Resume</p>
+    </a>
 </div>
+
 
 ## Installation
 
